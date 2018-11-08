@@ -1,0 +1,32 @@
+{
+	"title": "Client UI",
+	"loginPath": "./ClientUserLogin", 
+	"logoutPath": "./ClientUserLogout", 
+	"language": ["zh-tw", "zh-cn", "en-us"], 
+	"defaultWidget": "Home", 
+	"vlanlistcheck":  false,
+	"showMsg": false,
+	
+	"menu": [
+		{
+			"name": "Introduction",
+			"widget": "Introduction"
+		},
+		{
+			"name": "Fee",
+			"widget": "Fee"
+		},
+		{
+			"name": "Question",
+			"widget": "Question"
+		},
+		{
+			"name": "Connection",
+			"widget": "Connection"
+		}
+	]
+}
+
+
+
+

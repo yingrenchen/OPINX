@@ -1,0 +1,35 @@
+#mainmenu ul.menu {
+	position: fixed;
+	left: 0px;
+	top: 50px;
+	list-style-type: none;
+	margin: 0px;
+	
+	font-size: 0.8em;
+}
+
+#mainmenu ul li {
+	float: top;
+	height: 2em;
+	width: 100px;
+	margin: 0px;
+}
+
+#mainmenu ul li a {
+	font-size: 1em;
+	display: block;
+	background: #88aaff;
+	padding: 5px;
+}
+
+#mainmenu li ul {
+	display: none;
+	position: related;
+	margin-top: -30px;
+	margin-left: 100px;
+	list-style-type: none;
+}
+
+#mainmenu li:hover ul {
+	display: block;
+}

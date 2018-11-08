@@ -1,0 +1,304 @@
+#login {
+	font-family: helvetica, 微軟正黑體;
+	font-size: 14pt;
+	width: 300px;
+	height: 150px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-left: -160px;
+	margin-top: -85px;
+	padding: 20px;
+
+	border: 1px solid rgba(255, 255, 255, 1);
+	border-radius: 5px;
+	background: rgb(230, 230, 230);
+	background: rgba(230, 230, 230, 0.8);
+
+	-moz-box-shadow: 0 0 6px rgba(30, 30, 30, 0.8);
+	-webkit-box-shadow: 0 0 6px rgba(30, 30, 30, 0.8);
+	box-shadow: 0 0 6px rgba(30, 30, 30, 0.8);
+
+	z-index: 99999;
+}
+#login a.close {
+	font-size: 1em;
+	width: 36px;
+	height: 36px;
+	margin-left: 300px;
+	margin-top: -180px;
+	background: url(../../res/close.png);
+	z-index: 10;
+	display: block;
+	cursor: pointer;
+}
+#login #loginForm {
+	width: 278px;
+	height: 70px;
+	line-height: 35px;
+
+	color: #EEEEDD;
+	background: #ADA689;
+	border: 1px solid rgb(255, 255, 255);
+	border-radius: 5px;
+
+	margin-bottom: 5px;
+	padding: 10px;
+}
+#login #loginForm input {
+	border-radius: 3px;
+	width: 180px;
+	height: 1.5em;
+	float: right;
+	margin-top: 5px;
+	font-size: 12pt;
+}
+#login #button button{
+	cursor: pointer;
+	font-family: Calibri;
+	font-size: 16pt;
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+
+	color: #EEEEDD;
+	text-shadow: 0 1px 0 #909020;
+	
+	text-decoration: none;
+	font-family: helvetica, arial;
+	font-weight: bold;
+	display: block;
+	text-align: center;
+	/* position: relative; */
+	background: #69af41;
+	background: -webkit-gradient(	linear, center top, center bottom, 
+					color-stop(0.0, #BEB79B), 
+					color-stop(0.5, #8E876B),
+					color-stop(0.5, #6E674B),
+  					color-stop(1.0, #8E876B));
+	background: -moz-linear-gradient(top, #BEB79B, #8E876B 50%, #6E674B 51%, #8E876B); 
+
+	/* BORDER RADIUS */
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+
+	border: 1px solid #beae66;
+	border-top: 1px solid #d6dfc3;
+
+	/* BOX SHADOW */
+	-moz-box-shadow: 0 2px 6px black;
+	-webkit-box-shadow: 0 2px 6px black;
+	box-shadow: 0 2px 6px black;
+}
+
+
+#login #button2 {
+	cursor: pointer;
+	font-family: Calibri;
+	font-size: 12pt;
+	width: 30%;
+	height: 25px;
+	line-height: 15px;
+	color:block;
+	margin-top:10px;
+	float:right;
+	
+	
+}
+#login #button2:hover {
+	font-weight:bold;
+	text-decoration:underline;
+	font-size:0.9em;
+} 
+#login #button button:hover {
+	background: #69c337;  
+	background: -webkit-gradient(	linear, center top, center bottom, 
+					color-stop(0.0, #CEB79B), 
+					color-stop(0.5, #9E876B),
+					color-stop(0.5, #7E674B),
+  					color-stop(1.0, #9E876B));
+	background: -moz-linear-gradient(top, #CEB79B, #9E876B 50%, #7E674B 51%, #9E876B); 
+}  
+#login #button button:active {
+	margin-top: 7px;
+	-moz-box-shadow: 0 1px 3px black;
+	-webkit-box-shadow: 0 1px 3px black;
+}
+
+
+
+
+#mail {
+	font-family: Calibri;
+	font-size: 14pt;
+
+	width: 300px;
+	height: 120px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-left: -160px;
+	margin-top: -85px;
+	padding: 20px;
+
+	border: 1px solid rgba(255, 255, 255, 1);
+	border-radius: 5px;
+	background: rgb(230, 230, 230);
+	background: rgba(230, 230, 230, 0.8);
+
+	-moz-box-shadow: 0 0 6px rgba(30, 30, 30, 0.8);
+    -webkit-box-shadow: 0 0 6px rgba(30, 30, 30, 0.8);
+	box-shadow: 0 0 6px rgba(30, 30, 30, 0.8);
+
+	z-index: 99999;
+	
+}
+#mail a.close {
+	font-size: 1em;
+	width: 36px;
+	height: 36px;
+	margin-left: 300px;
+	margin-top: -180px;
+	background: url(../../res/close.png);
+	z-index: 10;
+	display: block;
+	cursor: pointer;
+}
+#mail #mailForm {
+	width: 270px;
+	height: 70px;
+	line-height: 35px;
+
+	color: rgb(217, 246, 161);
+	background: #ADA689;
+	border: 1px solid rgb(255, 255, 255);
+	border-radius: 5px;
+
+	margin-bottom: 5px;
+	padding: 10px;
+}
+#mail #mailForm input {
+	border-radius: 3px;
+	width: 200px;
+	height: 1.5em;
+	float: right;
+	margin-top: 5px;
+	font-size: 12pt;
+	
+}
+
+
+#mail #mailbutton button{
+	cursor: pointer;
+	font-family: Calibri;
+	font-size: 10pt;
+	width: 30%;
+	height: 25px;
+	line-height: 15px;
+ 	float:right;
+	color: #DDDDEE;
+	text-shadow: 0 1px 0 #909020;
+	color: #EEEEDD;
+	text-shadow: 0 1px 0 #909020;
+	
+	text-decoration: none;
+	font-family: helvetica, arial;
+	font-weight: bold;
+	display: block;
+	text-align: center;
+	/* position: relative; */
+	background: #69af41;
+	background: -webkit-gradient(	linear, center top, center bottom, 
+					color-stop(0.0, #BEB79B), 
+					color-stop(0.5, #8E876B),
+					color-stop(0.5, #6E674B),
+  					color-stop(1.0, #8E876B));
+	background: -moz-linear-gradient(top, #BEB79B, #8E876B 50%, #6E674B 51%, #8E876B); 
+
+	/* BORDER RADIUS */
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+
+	border: 1px solid #beae66;
+	border-top: 1px solid #d6dfc3;
+
+	/* BOX SHADOW */
+	-moz-box-shadow: 0 2px 6px black;
+	-webkit-box-shadow: 0 2px 6px black;
+	box-shadow: 0 2px 6px black;
+}
+
+#mail #mailbutton button:hover {
+	background: #69c337;  
+	background: -webkit-gradient(	linear, center top, center bottom, 
+					color-stop(0.0, #CEB79B), 
+					color-stop(0.5, #9E876B),
+					color-stop(0.5, #7E674B),
+  					color-stop(1.0, #9E876B));
+	background: -moz-linear-gradient(top, #CEB79B, #9E876B 50%, #7E674B 51%, #9E876B); 
+}  
+#mail #mailbutton button:active {
+	margin-top: 2px;
+	-moz-box-shadow: 0 1px 3px black;
+	-webkit-box-shadow: 0 1px 3px black;
+}
+
+
+#mail #backbutton button{
+	cursor: pointer;
+	font-family: Calibri;
+	font-size: 10pt;
+	width: 30%;
+	height: 25px;
+	line-height: 15px;
+
+	color: #DDDDEE;
+	text-shadow: 0 1px 0 #909020;
+	
+	color: #EEEEDD;
+	text-shadow: 0 1px 0 #909020;
+	
+	text-decoration: none;
+	font-family: helvetica, arial;
+	font-weight: bold;
+	display: block;
+	text-align: center;
+	/* position: relative; */
+	background: #69af41;
+	background: -webkit-gradient(	linear, center top, center bottom, 
+					color-stop(0.0, #BEB79B), 
+					color-stop(0.5, #8E876B),
+					color-stop(0.5, #6E674B),
+  					color-stop(1.0, #8E876B));
+	background: -moz-linear-gradient(top, #BEB79B, #8E876B 50%, #6E674B 51%, #8E876B); 
+
+	/* BORDER RADIUS */
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+
+	border: 1px solid #beae66;
+	border-top: 1px solid #d6dfc3;
+
+	/* BOX SHADOW */
+	-moz-box-shadow: 0 2px 6px black;
+	-webkit-box-shadow: 0 2px 6px black;
+	box-shadow: 0 2px 6px black;
+}
+
+#mail #backbutton button:hover {
+	background: #69c337;  
+	background: -webkit-gradient(	linear, center top, center bottom, 
+					color-stop(0.0, #CEB79B), 
+					color-stop(0.5, #9E876B),
+					color-stop(0.5, #7E674B),
+  					color-stop(1.0, #9E876B));
+	background: -moz-linear-gradient(top, #CEB79B, #9E876B 50%, #7E674B 51%, #9E876B); 
+}  
+#mail #backbutton button:active {
+	margin-top: 7px;
+	-moz-box-shadow: 0 1px 3px black;
+	-webkit-box-shadow: 0 1px 3px black;
+}

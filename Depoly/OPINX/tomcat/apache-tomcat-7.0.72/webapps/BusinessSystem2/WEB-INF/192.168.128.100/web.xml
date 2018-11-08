@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>BusinessSystem</display-name>
+  <welcome-file-list>
+    <welcome-file>index.htm</welcome-file>
+  </welcome-file-list>
+
+  <context-param>
+    <param-name>AdminUIURL</param-name>
+    <param-value>http://192.168.128.100:8080/AdminUI/</param-value>
+  </context-param>
+  <context-param>
+    <param-name>BusinessUIURL</param-name>
+    <param-value>http://192.168.128.100:8080/BusinessUI/</param-value>
+  </context-param>
+  <context-param>
+    <param-name>ClientUIURL</param-name>
+    <param-value>http://192.168.128.100:8080/ClientUI/</param-value>
+  </context-param>
+  
+  <context-param>
+    <param-name>AdminAPI</param-name>
+    <param-value>192.168.128.100</param-value>
+  </context-param>
+  <context-param>
+    <param-name>BusinessAPI</param-name>
+    <param-value>192.168.128.100</param-value>
+  </context-param>
+  <context-param>
+    <param-name>ClientAPI</param-name>
+    <param-value>192.168.128.100</param-value>
+  </context-param>
+  <context-param>
+    <param-name>OuterAPI</param-name>
+    <param-value>192.168.128.100</param-value>
+  </context-param>
+
+  <context-param>
+    <param-name>ALLOW_HOSTS</param-name>
+    <param-value>192.168.128.100,192.169.102.15,192.169.102.16,127.0.0.1</param-value>
+  </context-param>
+  <context-param>
+    <param-name>NOVA_NETWORK_MANAGER</param-name>
+    <param-value>VLAN</param-value>
+  </context-param>
+
+  <context-param>
+    <param-name>DB_url</param-name>
+    <param-value>192.168.128.100:3306</param-value>
+  </context-param>
+  <context-param>
+    <param-name>DB_name</param-name>
+    <param-value>iSoftCloudFrontEndDB</param-value>
+  </context-param>
+  <context-param>
+    <param-name>DB_user</param-name>
+    <param-value>isoftcloud</param-value>
+  </context-param>
+  <context-param>
+    <param-name>DB_password</param-name>
+    <param-value>openstack</param-value>
+  </context-param>
+  <context-param>
+    <param-name>host</param-name>
+    <param-value>192.168.128.100</param-value>
+  </context-param>
+  <context-param>
+    <param-name>port</param-name>
+    <param-value>5000</param-value>
+  </context-param>
+  <context-param>
+    <param-name>keystoneURL</param-name>
+    <param-value>http://192.168.128.100:5000/v2.0</param-value>
+  </context-param>
+  <context-param>
+    <param-name>keystoneAdminURL</param-name>
+    <param-value>http://192.168.128.100:35357/v2.0</param-value>
+  </context-param>
+  <context-param>
+    <param-name>keystoneV3URL</param-name>
+    <param-value>http://192.168.128.100:5000/v3</param-value>
+  </context-param>
+  <context-param>
+    <param-name>novaURL</param-name>
+    <param-value>http://192.168.128.100:8774/v2/</param-value>
+  </context-param>
+  <context-param>
+    <param-name>glanceURL</param-name>
+    <param-value>http://192.168.128.100:9292/v1</param-value>
+  </context-param>
+  <context-param>
+    <param-name>swiftURL</param-name>
+    <param-value></param-value>
+  </context-param>
+  <context-param>
+    <param-name>iiiURL</param-name>
+    <param-value>http://192.168.128.100:8088/iii</param-value>
+  </context-param>
+  <context-param>
+    <param-name>BusinessSystemURL</param-name>
+    <param-value>http://192.168.128.100:8080/BusinessSystem/</param-value>
+  </context-param>
+  <context-param>
+    <param-name>MonitorURL</param-name>
+    <param-value>http://192.168.128.100/cgi-bin/</param-value>
+  </context-param>
+  <context-param>
+    <param-name>WLBURL</param-name>
+    <param-value>/cgi-bin/weblb_config.pl</param-value>
+  </context-param>
+
+  <context-param>
+    <param-name>Scheduler_checkApplyPerioid</param-name>
+    <param-value>30</param-value>
+  </context-param>
+
+  <context-param>
+    <param-name>LogPath</param-name>
+    <param-value>/home/localadmin/log/BusinessSystem/</param-value>
+  </context-param>
+
+  <context-param>
+    <param-name>HTTP_PORT</param-name>
+    <param-value>8088</param-value>
+  </context-param>
+
+  <context-param>
+    <param-name>ShadoWin_Host</param-name>
+    <param-value>10.10.21.10</param-value>
+  </context-param>
+  <context-param>
+    <param-name>ShadoWin_Port</param-name>
+    <param-value>10000</param-value>
+  </context-param> 
+
+  <context-param>
+    <param-name>DeltaCloud_Host</param-name>
+    <param-value>http://175.98.115.23/</param-value>
+  </context-param>
+
+  <context-param>
+    <param-name>xCat_Host</param-name>
+    <param-value>http://192.169.102.31/</param-value>
+  </context-param>
+
+  <context-param>
+    <param-name>Auto_Scalability_Host</param-name>
+    <param-value>http://192.169.102.19:8088/autoscaling/api/</param-value>
+  </context-param>
+  
+  <context-param>
+    <param-name>iServDB_API_URL</param-name>
+    <param-value>http://10.10.21.174:2368/</param-value>
+  </context-param>
+  
+  <context-param>
+    <param-name>System_Description</param-name>
+    <param-value>iSoftCloud Cloud Management Platform</param-value>
+  </context-param>
+  <context-param>
+    <param-name>Company</param-name>
+    <param-value>2013 Institute for Information Industry</param-value>
+  </context-param>
+  <error-page>
+    <error-code>404</error-code>
+    <location>/404.htm</location>
+  </error-page>
+  <error-page>
+    <error-code>500</error-code>
+    <location>/500.htm</location>
+  </error-page>
+</web-app>
+

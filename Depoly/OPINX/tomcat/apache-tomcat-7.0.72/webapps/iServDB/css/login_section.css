@@ -1,0 +1,41 @@
+#login_section {
+	background: url(../assets/img/patterns/backgrounds/1.jpg) no-repeat top center #2d494d;
+    margin: 0px;
+    height: 100vh;
+}
+#login_section #content .admin-form {
+	margin:0 auto;
+}
+#login_section .login-title {
+	color: white;
+	font-size: 40px;
+	font-family: Microsoft Yahei,Hiragino Sans GB,WenQuanYi Micro Hei,sans-serif;
+	margin-bottom: -20px;
+	font-weight: 700;
+}
+#login_section .admin-form .panel{
+	box-shadow: 0 1px 40px 0 rgba(0, 0, 0, 0.3);
+}
+#login_section .login-bottom,#login_section .register-bottom{
+	margin-top: -15px;
+}
+#login_section .login-bottom div,#login_section .register-bottom div{
+	color: white;
+}
+#login_section .login-bottom div:nth-child(2){
+	text-align: right;
+}
+#login_section .login-bottom span,#login_section .register-bottom span{
+	cursor: pointer;
+}
+#login_section .register_div,#login_section .register-bottom,#login_section .forgetpassword_div{
+	display:none;
+}
+#login_section .require_input{
+	border-left: solid #DA0F0F;
+}
+input.error{
+	box-shadow: 0 0 5px #d45252;
+    border-color: #EC6060 !important
+}
+

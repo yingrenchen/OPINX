@@ -1,0 +1,33 @@
+.image_tag {
+    display: inline-block;
+    margin: 5px 5px 0px 0px;
+}
+
+.rule_tag {
+	display: inline-block;
+    margin: 8px 5px 0px 0px;
+}
+
+.role_tag {
+	display: inline-block;
+    margin: 4px 2px 4px 2px;
+}
+
+.tm-tag-disabled {
+	color: #626262;
+    background-color: white;
+    border: 1px solid #57aae1;
+}
+
+.backup_tag {
+	display: inline-block;
+    margin: 2px 2px 0px 0px;
+    padding: 7px 10px;
+}
+
+.backup_tag_disabled {
+	color: #626262;
+	font-weight: 400;
+	border: 1px solid #DDD !important;
+    background: #f2f2f2;
+}

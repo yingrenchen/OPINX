@@ -1,0 +1,334 @@
+#login,
+div#subloginForm 
+{
+	font-family: Calibri;
+	font-size: 14pt;
+
+	width: 280px;
+
+	position: fixed;
+	top: 40%;
+	left: 50%;
+	margin-left: -160px;
+	margin-top: -85px;
+	padding: 20px;
+
+	border: 1px solid rgba(255, 255, 255, 1);
+	border-radius: 5px;
+	background: rgb(230, 230, 230);
+	background: rgba(230, 230, 230, 0.8);
+
+	-moz-box-shadow: 0 0 6px rgba(30, 30, 30, 0.8);
+	-webkit-box-shadow: 0 0 6px rgba(30, 30, 30, 0.8);
+	box-shadow: 0 0 6px rgba(30, 30, 30, 0.8);
+
+	z-index: 99999;
+}
+#login a.close {
+	font-size: 1em;
+	width: 36px;
+	height: 36px;
+	top:-7%;
+	left:95%;
+	background: url(../../res/close.png);
+	z-index: 10;
+	display: block;
+	cursor: pointer;
+	position: absolute;
+}
+#login #loginForm,
+div#subloginForm div.loginForm
+{
+	width: 262px;
+	min-height: 80px;
+	line-height: 35px;
+
+	color: #DDDDEE;
+	background: #0C6680;
+	border: 1px solid rgb(255, 255, 255);
+	border-radius: 5px;
+
+	margin-bottom: 5px;
+	padding: 10px;
+}
+#login #loginForm input,
+div#subloginForm input
+{
+	border-radius: 3px;
+	width: 175px;
+	height: 1.5em;
+	float: right;
+	margin-top: 5px;
+	font-size: 12pt;
+}
+
+#login #loginForm table,
+div#subloginForm div.loginForm table
+{	
+	width: 100%;
+}
+
+#login #loginForm table tr td:nth-child(0) 
+{	
+	width: 20px;
+}
+
+
+#login #button button
+{
+	cursor: pointer;
+	font-family: Calibri;
+	font-size: 16pt;
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+
+	color: #DDDDEE;
+	text-shadow: 0 1px 0 #909020;
+
+	text-decoration: none;
+	font-family: helvetica, arial;
+	font-weight: bold;
+	display: block;
+	text-align: center;
+	/* position: relative; */
+	background: #6185C2;
+	background: -webkit-gradient(	linear, center top, center bottom, 
+					color-stop(0.0, #7195B2), 
+					color-stop(0.5, #5175B2),
+					color-stop(0.5, #315592),
+  					color-stop(1.0, #5175B2));
+	/*background: -moz-linear-gradient(top, #81A5C2, #6185C2 50%, #4165A2 51%, #6185C2);*/ 
+        background: -moz-linear-gradient(center top , #98B8C2, #0C6680 50%, #0C6680 51%, #3A899B);
+	/* BORDER RADIUS */
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+
+	border: 1px solid #6676be;
+	border-top: 1px solid #c6cfee;
+
+	/* BOX SHADOW */
+	-moz-box-shadow: 0 2px 6px black;
+	-webkit-box-shadow: 0 2px 6px black;
+	box-shadow: 0 2px 6px black;
+}
+
+#login #button2{
+	cursor: pointer;
+	font-family: Calibri;
+	font-size: 12pt;
+	width: 30%;
+	height: 25px;
+	line-height: 15px;
+	color:block;
+	margin-top:10px;
+	float:right;
+	
+	
+}
+#login #button2:hover,
+div.subCientLogin:hover
+{
+	font-weight:bold;
+	text-decoration:underline;
+	font-size:0.9em;
+} 
+#login #button button:hover {
+	background: #66185C2;  
+	background: -webkit-gradient(	linear, center top, center bottom, 
+					color-stop(0.0, #81A5C2), 
+					color-stop(0.5, #6185C2),
+					color-stop(0.5, #4165A2),
+  					color-stop(1.0, #6185C2));
+	background: -moz-linear-gradient(top, #81A5C2, #6185C2 50%, #4165A2 51%, #6185C2); 
+}  
+#login #button button:active {
+	margin-top: 7px;
+	-moz-box-shadow: 0 1px 3px black;
+	-webkit-box-shadow: 0 1px 3px black;
+}
+
+
+
+
+#mail {
+	font-family: Calibri;
+	font-size: 14pt;
+	width: 324px;
+	height: 135px;
+	position: fixed;
+	top: 44%;
+	left: 48%;
+	margin-left: -160px;
+	margin-top: -85px;
+	padding: 20px;
+	border: 1px solid rgba(255, 255, 255, 1);
+	border-radius: 5px;
+	background: rgb(230, 230, 230);
+	background: rgba(230, 230, 230, 0.8);
+
+	-moz-box-shadow: 0 0 6px rgba(30, 30, 30, 0.8);
+    -webkit-box-shadow: 0 0 6px rgba(30, 30, 30, 0.8);
+	box-shadow: 0 0 6px rgba(30, 30, 30, 0.8);
+
+	z-index: 99999;
+	
+}
+#mail a.close {
+	font-size: 1em;
+	width: 36px;
+	height: 36px;
+	margin-left: 300px;
+	margin-top: -180px;
+	background: url(../../res/close.png);
+	z-index: 10;
+	display: block;
+	cursor: pointer;
+}
+#mail #mailForm {
+	width: 300px;
+	height: 85px;
+	line-height: 35px;
+
+	color: rgb(217, 246, 161);
+	background: #0C6680;
+	border: 1px solid rgb(255, 255, 255);
+	border-radius: 5px;
+
+	margin-bottom: 5px;
+	padding: 10px;
+}
+#mail #mailForm input {
+	border-radius: 3px;
+	width: 185px;
+	height: 1.5em;
+	float: right;
+	margin-top: 5px;
+	font-size: 12pt;
+	
+}
+
+
+#mail #mailbutton button,
+div#loginButton button#loginButton
+{
+	cursor: pointer;
+	font-family: Calibri;
+	font-size: 10pt;
+	width: 30%;
+	height: 25px;
+	line-height: 15px;
+ 	float:right;
+	color: #DDDDEE;
+	text-shadow: 0 1px 0 #909020;
+	
+	color: #DDDDEE;
+	text-shadow: 0 1px 0 #909020;
+
+	text-decoration: none;
+	font-family: helvetica, arial;
+	font-weight: bold;
+	display: block;
+	text-align: center;
+	/* position: relative; */
+	background: #6185C2;
+	background: -webkit-gradient(	linear, center top, center bottom, 
+					color-stop(0.0, #7195B2), 
+					color-stop(0.5, #5175B2),
+					color-stop(0.5, #315592),
+  					color-stop(1.0, #5175B2));
+	/*background: -moz-linear-gradient(top, #81A5C2, #6185C2 50%, #4165A2 51%, #6185C2);*/ 
+        background: -moz-linear-gradient(center top , #98B8C2, #0C6680 50%, #0C6680 51%, #3A899B);
+	/* BORDER RADIUS */
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+
+	border: 1px solid #6676be;
+	border-top: 1px solid #c6cfee;
+
+	/* BOX SHADOW */
+	-moz-box-shadow: 0 2px 6px black;
+	-webkit-box-shadow: 0 2px 6px black;
+	box-shadow: 0 2px 6px black;
+}
+
+
+#mail #mailbutton button:hover,
+div#loginButton button#loginButton::hover
+{
+	background: #66185C2;  
+	background: -webkit-gradient(	linear, center top, center bottom, 
+					color-stop(0.0, #81A5C2), 
+					color-stop(0.5, #6185C2),
+					color-stop(0.5, #4165A2),
+  					color-stop(1.0, #6185C2));
+	background: -moz-linear-gradient(top, #81A5C2, #6185C2 50%, #4165A2 51%, #6185C2); 
+}  
+#mail #mailbutton button:active {
+	margin-top: 2px;
+	-moz-box-shadow: 0 1px 3px black;
+	-webkit-box-shadow: 0 1px 3px black;
+}
+
+
+#mail #backbutton button,
+div#subloginForm button#backButton
+{
+	cursor: pointer;
+	font-family: Calibri;
+	font-size: 10pt;
+	width: 30%;
+	height: 25px;
+	line-height: 15px;
+
+	
+	color: #DDDDEE;
+	text-shadow: 0 1px 0 #909020;
+
+	text-decoration: none;
+	font-family: helvetica, arial;
+	font-weight: bold;
+	display: block;
+	text-align: center;
+	/* position: relative; */
+	background: #6185C2;
+	background: -webkit-gradient(	linear, center top, center bottom, 
+					color-stop(0.0, #7195B2), 
+					color-stop(0.5, #5175B2),
+					color-stop(0.5, #315592),
+  					color-stop(1.0, #5175B2));
+	/*background: -moz-linear-gradient(top, #81A5C2, #6185C2 50%, #4165A2 51%, #6185C2);*/ 
+        background: -moz-linear-gradient(center top , #98B8C2, #0C6680 50%, #0C6680 51%, #3A899B);
+	/* BORDER RADIUS */
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+
+	border: 1px solid #6676be;
+	border-top: 1px solid #c6cfee;
+
+	/* BOX SHADOW */
+	-moz-box-shadow: 0 2px 6px black;
+	-webkit-box-shadow: 0 2px 6px black;
+	box-shadow: 0 2px 6px black;
+}
+
+
+#mail #backbutton button:hover,
+div#subloginForm button:hover
+{
+	background: #66185C2;  
+	background: -webkit-gradient(	linear, center top, center bottom, 
+					color-stop(0.0, #81A5C2), 
+					color-stop(0.5, #6185C2),
+					color-stop(0.5, #4165A2),
+  					color-stop(1.0, #6185C2));
+	background: -moz-linear-gradient(top, #81A5C2, #6185C2 50%, #4165A2 51%, #6185C2); 
+}  
+#mail #backbutton button:active {
+	margin-top: 7px;
+	-moz-box-shadow: 0 1px 3px black;
+	-webkit-box-shadow: 0 1px 3px black;
+}

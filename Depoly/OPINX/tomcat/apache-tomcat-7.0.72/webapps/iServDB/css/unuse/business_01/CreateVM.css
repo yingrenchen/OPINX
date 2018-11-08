@@ -1,0 +1,287 @@
+#createVM {
+	position: absolute;
+	left: 50%;
+	margin-left: -350px;
+	top: 100px;
+
+	padding: 10px;
+
+	background: rgb(255, 255, 255);
+	overflow: auto;
+}
+
+#createVM button.unique {
+	cursor: pointer;
+	background: #93BC8D;
+	color: white;
+	font-size: 14px;
+	margin: 0 17px 0 0;
+	padding: 10px 10px 10px 10px;
+	border: 1px solid rgb(142, 176, 138);
+	border-radius: 5px;
+	-webkit-transition-property: background;
+	-webkit-transition-duration: 0.2s;
+	text-shadow: #62935C 0 -1px 0;
+	background-image: -ms-linear-gradient(top, rgb(152, 196, 148) 0%, rgb(132, 166, 128) 100%);
+	background-image: -moz-linear-gradient(top, rgb(152, 196, 148) 0%, rgb(132, 166, 128) 100%);
+	background-image: -webkit-linear-gradient(top, rgb(152, 196, 148) 0%, rgb(132, 166, 128) 100%);
+	background-image: linear-gradient(top, rgb(152, 196, 148) 0%, rgb(132, 166, 128) 100%);
+	box-shadow: 0px 0px 3px rgba(30, 30, 30, .5);
+}
+#createVM button.unique:hover {
+	text-shadow: #62935C 0 -1px 0;
+	background-image: -ms-linear-gradient(top, rgb(162, 206, 158) 0%, rgb(142, 176, 138) 100%);
+	background-image: -moz-linear-gradient(top, rgb(162, 206, 158) 0%, rgb(142, 176, 138) 100%);
+	background-image: -webkit-linear-gradient(top, rgb(162, 206, 158) 0%, rgb(142, 176, 138) 100%);
+	background-image: linear-gradient(top, rgb(162, 206, 158) 0%, rgb(142, 176, 138) 100%);
+}
+#createVM button.unique:active {
+	text-shadow: #62935C 0 -1px 0;
+	background-image: -ms-linear-gradient(top, rgb(142, 176, 138) 0%, rgb(162, 206, 158) 100%);
+	background-image: -moz-linear-gradient(top, rgb(142, 176, 138) 0%, rgb(162, 206, 158) 100%);
+	background-image: -webkit-linear-gradient(top, rgb(142, 176, 138) 0%, rgb(162, 206, 158) 100%);
+	background-image: linear-gradient(top, rgb(142, 176, 138) 0%, rgb(162, 206, 158) 100%);
+	box-shadow: 0px 0px 1px rgba(30, 30, 30, .3);
+}
+
+#createVM .setup {
+
+}
+#createVM .setup > div {
+	background: rgb(250, 250, 250);
+	border-radius: 8px;
+	box-shadow: 0px 0px 5px rgba(30, 30, 30, .3);
+	padding: 10px;
+	width: 640px;
+	min-height: 300px;
+	display: none;
+}
+#createVM .setup > div.current {
+	background: rgb(250, 250, 250);
+	border-radius: 8px;
+	box-shadow: 0px 0px 5px rgba(30, 30, 30, .3);
+	padding: 10px;
+	display: block;
+}
+#createVM .setup > div > div.title {
+	font-size: 1.8em;
+	font-weight: bold;
+	color: rgb(100, 100, 100);
+	text-align: left;
+}
+#createVM .setup > div > div.title > h2{
+	font-size: 1.1em;
+	font-weight: bold;
+	color: rgb(200, 100, 50);
+	float: left;
+	width: 200px;
+	margin: 0px;
+}
+#createVM .setup > div > div.content {
+	padding: 10px;
+}
+#createVM .setup > div > div.content > div.image {
+	cursor: pointer;
+	padding: 5px;
+	margin: 5px;
+	width: 600px;
+	height: 120px;
+
+	border-top: 1px solid rgb(250, 250, 250);
+	border-bottom: 1px solid rgb(150, 150, 150);
+	border-left: 1px solid rgb(200, 200, 200);
+	border-right: 1px solid rgb(200, 200, 200);
+	border-radius: 5px;
+	
+	background: rgb(230, 230, 230);
+	background-image: -ms-linear-gradient(top, rgb(245, 245, 245) 0%, rgb(215, 215, 215) 100%);
+	background-image: -moz-linear-gradient(top, rgb(245, 245, 245) 0%, rgb(215, 215, 215) 100%);
+	background-image: -webkit-linear-gradient(top, rgb(245, 245, 245) 0%, rgb(215, 215, 215) 100%);
+	background-image: linear-gradient(top, rgb(245, 245, 245) 0%, rgb(215, 215, 215) 100%);
+	box-shadow: 0px 1px 2px rgba(30, 30, 30, .3);
+	
+	text-shadow: rgb(250, 250, 250) 0 -1px 0;
+}
+#createVM .setup > div > div.content > div.image p {
+	text-align: center;
+	font-weight: bold;
+}
+#createVM .setup > div > div.content > div.network {
+	cursor: pointer;
+	padding: 5px;
+	margin: 5px;
+	width: 600px;
+	height: 30px;
+	line-height: 30px;
+	font-weight: bold;
+
+	border-top: 1px solid rgb(250, 250, 250);
+	border-bottom: 1px solid rgb(150, 150, 150);
+	border-left: 1px solid rgb(200, 200, 200);
+	border-right: 1px solid rgb(200, 200, 200);
+	border-radius: 5px;
+	
+	background: rgb(230, 230, 230);
+	background-image: -ms-linear-gradient(top, rgb(245, 245, 245) 0%, rgb(215, 215, 215) 100%);
+	background-image: -moz-linear-gradient(top, rgb(245, 245, 245) 0%, rgb(215, 215, 215) 100%);
+	background-image: -webkit-linear-gradient(top, rgb(245, 245, 245) 0%, rgb(215, 215, 215) 100%);
+	background-image: linear-gradient(top, rgb(245, 245, 245) 0%, rgb(215, 215, 215) 100%);
+	box-shadow: 0px 1px 2px rgba(30, 30, 30, .3);
+	
+	text-shadow: rgb(250, 250, 250) 0 -1px 0;
+}
+#createVM .setup > div > div.content > div.select {
+	border-bottom: 1px solid rgb(250, 250, 250);
+	box-shadow: 0px 0px 0px rgba(30, 30, 30, .3);
+
+	background-image: -ms-linear-gradient(top, rgb(225, 245, 225) 0%, rgb(245, 255, 245) 50%, rgb(225, 245, 225) 100%);
+	background-image: -moz-linear-gradient(top, rgb(225, 245, 225) 0%, rgb(245, 255, 245) 50%, rgb(225, 245, 225) 100%);
+	background-image: -webkit-linear-gradient(top, rgb(225, 245, 225) 0%, rgb(245, 255, 245) 50%, rgb(225, 245, 225) 100%);
+	background-image: linear-gradient(top, rgb(225, 245, 225) 0%, rgb(245, 255, 245) 50%, rgb(225, 245, 225) 100%);
+}
+#createVM .setup > div > div.content > div.image > img {
+	float: left;
+}
+#createVM .setup > div > div.content input.textInput {
+	border-top: 0px solid rgb(0, 0, 0);
+	border-left: 0px solid rgb(0, 0, 0);
+	border-right: 0px solid rgb(0, 0, 0);
+	border-bottom: 1px solid rgb(100, 100, 100);
+	background: rgba(250, 250, 250, 0);
+	width: 180px;
+	font-size: 1.5em;
+	padding-left: 5px;
+	color: rgb(60, 60, 60);
+}
+#createVM .setup > div#stepFinal > div.content > div {
+	clear: both;
+	padding-left: 0px;
+	text-align: center;
+	width: 100%;
+}
+#createVM .setup > div#stepFinal > div.content > div > p {
+	float: left;
+	margin: 0px;
+	line-height: 40px;
+	font-size: 1.2em;
+}
+#createVM .setup > div#stepFinal > div.content > div > p.label {
+	width: 150px;
+	font-weight: bold;
+	text-align: right;
+}
+#createVM .setup > div#stepFinal > div.content > div > p.value {
+	width: 200px;
+	display: block;
+	text-align: right;
+	padding-right: 10px;
+}
+#createVM .setup > div#stepFinal > div.content > div > p.unit {
+	font-size: 8pt;
+	padding-top: 8px;
+	padding-right: 10px;
+	margin-left: 10px;
+	color: rgb(150, 200, 150);
+}
+
+#createVM .operate {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(50, 50, 50, .3);
+	z-index: 0;
+	overflow: auto;
+	z-index: 1000;
+}
+#createVM .operate a {
+	position: fixed;
+	top: 200px;
+	cursor: pointer;
+	font-weight: bold;
+	color: rgb(250, 180, 50);
+	text-shadow: 0px 0px 5px rgb(150, 150, 150);
+	font-size: 5em;
+}
+#createVM .operate a:hover {
+	color: rgb(250, 130, 0);
+	text-shadow: 0px 0px 5px rgb(200, 200, 200);
+}
+#createVM .operate a.close {
+	top: 50px;
+	left: 50%;
+	font-size: 1em;
+	width: 36px;
+	height: 36px;
+	margin-left: 300px;
+	background: url(../../res/close.png);
+	z-index: 10;
+}
+#createVM .operate a.back {
+	left: 50%;
+	margin-left: -400px;
+}
+#createVM .operate a.next {
+	left: 50%;
+	margin-left: 340px;
+}
+#createVM .operate > div {
+	position: absolute;
+	top: 70px;
+	left: 50%;
+	margin-left: -340px;
+}
+
+#createVM .operate .setup .dataset {
+	width: 80%;
+	line-height: 40px;
+	height: 40px;
+	padding-left: 150px;
+
+	display: block;
+	clear: both;
+}
+#createVM .operate .setup .dataset > h3 {
+	margin: 0px;
+	float: left;
+}
+#createVM .operate .setup .dataset > input {
+	float: left;
+	margin-left: 20px;
+	margin-right: 10px;
+}
+#createVM .operate .setup .dataset > h4 {
+	float: right;
+	border: 0px solid rgba(255, 255, 255, 0);
+	background: rgba(255, 255, 255, 0);
+	margin: 0px;
+	margin-right: 200px;
+}
+#createVM .operate .setup .dataset h4.cpu:after {
+	content: 'cores';
+
+	font-size: 8pt;
+	padding-top: 8px;
+	padding-right: 10px;
+	margin-left: 10px;
+	color: rgb(150, 200, 150);
+}
+#createVM .operate .setup .dataset h4.ram:after {
+	content: 'MB';
+
+	font-size: 8pt;
+	padding-top: 8px;
+	padding-right: 10px;
+	margin-left: 10px;
+	color: rgb(150, 200, 150);
+}
+#createVM .operate .setup .dataset h4.disk:after {
+	content: 'GB';
+
+	font-size: 8pt;
+	padding-top: 8px;
+	padding-right: 10px;
+	margin-left: 10px;
+	color: rgb(150, 200, 150);
+}

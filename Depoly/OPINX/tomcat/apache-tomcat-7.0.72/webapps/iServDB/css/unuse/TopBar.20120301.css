@@ -1,0 +1,106 @@
+#topBar {
+	background: #F3F8FA;
+	padding-left: 5px;
+	padding-right: 5px;
+	
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	
+	height: 45px;
+	z-index: 500;
+	width: 100%;
+	
+	border-left: 1px solid rgb(180, 240, 180);
+	border-right: 1px solid rgb(180, 240, 180);
+	border-bottom: 1px solid rgb(180, 240, 180);
+}
+
+#topBar #mainmenu {
+	float: left;
+	background: #F3F8FA;
+	text-transform: uppercase;
+	height: 45px;
+	width: 100px;
+
+	border-bottom: 1px solid #CBE0E8;
+}
+
+#topBar #user {
+	background: #F3FAF3;
+	color: #6EAF6E;
+	min-width: 150px;
+	height: 45px;
+	padding-left: 10px;
+
+	display: block;
+	border-bottom: 1px solid #D6E4D9;
+}
+
+#topBar #user #userInfo {
+
+}
+
+#topBar #user #userInfo #userName {
+	font-size: 1.2em;
+	font-weight: bold;
+	text-align: right;
+}
+
+#topBar #user #userInfo #userRole {
+	font-size: 0.8em;
+	font-weight: bold;
+	text-align: right;
+}
+
+#topBar #user #accountAction {
+	margin-left: 10px;
+	margin-right: 0px;
+	float: right;
+	display: block;
+	width: 20px;
+	height: 45px;
+	cursor: pointer;
+	
+	border-bottom: 1px solid #C6D4C9;
+	border-left: 1px solid #C6D4C9;
+	border-right: 1px solid #C6D4C9;
+	background: #C9EAD1;
+}
+
+#topBar #user #accountAction::before {
+	content: "►";
+	line-height: 45px;
+	font-size: 0.8em;
+	margin-left: 5px;
+}
+
+#topBar #user #accountAction #accountMenu {
+	display: none;
+
+	position: fixed;
+	top: 45px;
+	right: 0px;
+	margin-top: 0px;
+	margin-left: 0px;
+	padding: 0px;
+	background: #C0E0C0;
+
+	list-style-type: none;
+}
+
+#topBar #user #accountAction #accountMenu li {
+	text-align: center;
+	width: 80px;
+	height: 40px;
+	line-height: 40px;
+	float: left;
+	background: #C9EAD1;
+	
+	margin-left: 2px;
+	border-bottom: 3px solid rgb(100, 150, 100);
+}
+
+#topBar #user:hover #accountAction #accountMenu {
+	display: block;
+}

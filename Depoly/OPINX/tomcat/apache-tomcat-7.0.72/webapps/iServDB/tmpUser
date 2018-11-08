@@ -1,0 +1,96 @@
+{
+	"language": ["zh-tw", "zh-cn", "en-us"],
+	"role": "Client",
+	"defaultWidget": "Lup_UserDashboard",
+	
+	"menu": [
+		{
+			"name": "Overview",
+			"widget": "Lup_UserDashboard"
+		},
+		{
+			"name": "Apply Service",
+			"widget": "ApplyVMService"
+		},
+		{
+			"name": "My Resource",
+			"widget": "UserServiceSetting",
+			"submenu": [
+				{
+					"name": "Virtual Machine",
+					"widget": "UserVirtualMachine_Lup",
+					"submenu": [
+						{"name": "VM-001", "widget": "UserVirtualMachine_Lup"},
+						{"name": "VM-002", "widget": "UserVirtualMachine_Lup"},
+						{"name": "VM-003", "widget": "UserVirtualMachine_Lup"},
+						{"name": "VM-004", "widget": "UserVirtualMachine_Lup"},
+						{"name": "VM-005", "widget": "UserVirtualMachine_Lup"},
+						{"name": "VM-006", "widget": "UserVirtualMachine_Lup"},
+						{"name": "VM-007", "widget": "UserVirtualMachine_Lup"},
+						{"name": "VM-008", "widget": "UserVirtualMachine_Lup"},
+						{"name": "VM-009", "widget": "UserVirtualMachine_Lup"},
+						{"name": "VM-010", "widget": "UserVirtualMachine_Lup"}
+					]
+				},
+				{
+					"name": "Storage",
+					"widget": "UserStorage_Lup",
+					"submenu": [
+						{"name": "Disk-001", "widget": "UserStorage_Lup"},
+						{"name": "Disk-002", "widget": "UserStorage_Lup"},
+						{"name": "Disk-003", "widget": "UserStorage_Lup"}
+					]
+				},
+				{
+					"name": "ShareSpace",
+					"widget": "UserStorage_Lup",
+					"submenu": [
+						{"name": "Disk-001", "widget": "UserStorage_Lup"},
+						{"name": "Disk-002", "widget": "UserStorage_Lup"},
+						{"name": "Disk-003", "widget": "UserStorage_Lup"}
+					]
+				},
+				{
+					"name": "Network",
+					"widget": "UserNetwork_Lup",
+					"submenu": [
+						{"name": "Default", "widget": "UserNetwork_Lup"},
+						{"name": "Group-001", "widget": "UserNetwork_Lup"},
+						{"name": "Group-002", "widget": "UserNetwork_Lup"},
+						{"name": "Group-003", "widget": "UserNetwork_Lup"}
+					]
+				},
+				{
+					"name": "Image",
+					"widget": "UserImage_Lup",
+					"submenu": [
+						{"name": "Image-001", "widget": "UserImage_Lup"},
+						{"name": "Image-002", "widget": "UserImage_Lup"},
+						{"name": "Image-003", "widget": "UserImage_Lup"}
+					]
+				}
+			]
+		},
+		{
+			"name": "Document",
+			"submenu": [
+				{
+					"name": "Introduction",
+					"widget": "Introduction"
+				},
+				{
+					"name": "Fee",
+					"widget": "Fee"
+				},
+				{
+					"name": "Question",
+					"widget": "Question"
+				},
+				{
+					"name": "Connection",
+					"widget": "Connection"
+				}
+			]
+		}
+	]
+}

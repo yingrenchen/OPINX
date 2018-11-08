@@ -1,0 +1,507 @@
+#createVM {
+	position: absolute;
+	left: 50%;
+	margin-left: -350px;
+	top: 100px;
+
+	padding: 10px;
+
+	background: rgb(255, 255, 255);
+	overflow: auto;
+}
+
+#createVM button.unique {
+	cursor: pointer;
+	background: #93BC8D;
+	color: white;
+	font-size: 14px;
+	margin: 0 17px 0 0;
+	padding: 10px 10px 10px 10px;
+	border: 1px solid rgb(142, 176, 138);
+	border-radius: 5px;
+	-webkit-transition-property: background;
+	-webkit-transition-duration: 0.2s;
+	text-shadow: #62935C 0 -1px 0;
+	background-image: -ms-linear-gradient(top, rgb(152, 196, 148) 0%, rgb(132, 166, 128) 100%);
+	background-image: -moz-linear-gradient(top, rgb(152, 196, 148) 0%, rgb(132, 166, 128) 100%);
+	background-image: -webkit-linear-gradient(top, rgb(152, 196, 148) 0%, rgb(132, 166, 128) 100%);
+	background-image: linear-gradient(top, rgb(152, 196, 148) 0%, rgb(132, 166, 128) 100%);
+	box-shadow: 0px 0px 3px rgba(30, 30, 30, .5);
+}
+#createVM button.unique:hover {
+	text-shadow: #62935C 0 -1px 0;
+	background-image: -ms-linear-gradient(top, rgb(162, 206, 158) 0%, rgb(142, 176, 138) 100%);
+	background-image: -moz-linear-gradient(top, rgb(162, 206, 158) 0%, rgb(142, 176, 138) 100%);
+	background-image: -webkit-linear-gradient(top, rgb(162, 206, 158) 0%, rgb(142, 176, 138) 100%);
+	background-image: linear-gradient(top, rgb(162, 206, 158) 0%, rgb(142, 176, 138) 100%);
+}
+#createVM button.unique:active {
+	text-shadow: #62935C 0 -1px 0;
+	background-image: -ms-linear-gradient(top, rgb(142, 176, 138) 0%, rgb(162, 206, 158) 100%);
+	background-image: -moz-linear-gradient(top, rgb(142, 176, 138) 0%, rgb(162, 206, 158) 100%);
+	background-image: -webkit-linear-gradient(top, rgb(142, 176, 138) 0%, rgb(162, 206, 158) 100%);
+	background-image: linear-gradient(top, rgb(142, 176, 138) 0%, rgb(162, 206, 158) 100%);
+	box-shadow: 0px 0px 1px rgba(30, 30, 30, .3);
+}
+
+#createVM .setup {
+
+}
+#createVM .setup > div {
+	background: rgb(250, 250, 250);
+	border-radius: 8px;
+	box-shadow: 0px 0px 5px rgba(30, 30, 30, .3);
+	padding: 10px;
+	width: 640px;
+	min-height: 300px;
+	height:560px;
+	overflow-x:hidden;
+	display: none;
+}
+#createVM .setup > div.current {
+	background: rgb(250, 250, 250);
+	border-radius: 8px;
+	box-shadow: 0px 0px 5px rgba(30, 30, 30, .3);
+	padding: 10px;
+	display: block;
+}
+#createVM .setup > div > div.title {
+	font-size: 1.8em;
+	font-weight: bold;
+	color: rgb(100, 100, 100);
+	text-align: left;
+}
+#createVM .setup > div > div.title > h2{
+	font-size: 1.1em;
+	font-weight: bold;
+	color: rgb(200, 100, 50);
+	float: left;
+	width: 200px;
+	margin: 0px;
+}
+#createVM .setup > div > div.content {
+	padding: 0px 10px;
+	
+	/* 20140110 shine add */
+	height: 566px;
+	overflow-y: auto;
+	width: 97%;
+	overflow-x: hidden;
+}
+#createVM .setup > div > div.content > div.image {
+	position: relative;
+	cursor: pointer;
+	padding: 5px;
+	margin: 8px;
+	width: 270px;
+	height: 70px;
+	float:left;
+	border-top: 1px solid rgb(250, 250, 250);
+	border-bottom: 1px solid rgb(150, 150, 150);
+	border-left: 1px solid rgb(200, 200, 200);
+	border-right: 1px solid rgb(200, 200, 200);
+	border-radius: 5px;
+	
+	background: rgb(230, 230, 230);
+	background-image: -ms-linear-gradient(top, rgb(245, 245, 245) 0%, rgb(215, 215, 215) 100%);
+	background-image: -moz-linear-gradient(top, rgb(245, 245, 245) 0%, rgb(215, 215, 215) 100%);
+	background-image: -webkit-linear-gradient(top, rgb(245, 245, 245) 0%, rgb(215, 215, 215) 100%);
+	background-image: linear-gradient(top, rgb(245, 245, 245) 0%, rgb(215, 215, 215) 100%);
+	box-shadow: 0px 1px 2px rgba(30, 30, 30, .3);
+	
+	text-shadow: rgb(250, 250, 250) 0 -1px 0;
+}
+#createVM .setup > div > div.content > div.image p {
+	text-align: center;
+	font-weight: bold;
+}
+
+#createVM .setup > div > div.content > div.network {
+	cursor: pointer;
+	padding: 5px;
+	margin: 5px;
+	width: 600px;
+	height: 30px;
+	line-height: 30px;
+	font-weight: bold;
+
+	border-top: 1px solid rgb(250, 250, 250);
+	border-bottom: 1px solid rgb(150, 150, 150);
+	border-left: 1px solid rgb(200, 200, 200);
+	border-right: 1px solid rgb(200, 200, 200);
+	border-radius: 5px;
+	
+	background: rgb(230, 230, 230);
+	background-image: -ms-linear-gradient(top, rgb(245, 245, 245) 0%, rgb(215, 215, 215) 100%);
+	background-image: -moz-linear-gradient(top, rgb(245, 245, 245) 0%, rgb(215, 215, 215) 100%);
+	background-image: -webkit-linear-gradient(top, rgb(245, 245, 245) 0%, rgb(215, 215, 215) 100%);
+	background-image: linear-gradient(top, rgb(245, 245, 245) 0%, rgb(215, 215, 215) 100%);
+	box-shadow: 0px 1px 2px rgba(30, 30, 30, .3);
+	
+	text-shadow: rgb(250, 250, 250) 0 -1px 0;
+}
+#createVM .setup > div > div.content > div.select {
+	border-bottom: 1px solid rgb(250, 250, 250);
+	box-shadow: 0px 0px 0px rgba(30, 30, 30, .3);
+
+	background-image: -ms-linear-gradient(top, rgb(225, 245, 225) 0%, rgb(245, 255, 245) 50%, rgb(225, 245, 225) 100%);
+	background-image: -moz-linear-gradient(top, rgb(225, 245, 225) 0%, rgb(245, 255, 245) 50%, rgb(225, 245, 225) 100%);
+	background-image: -webkit-linear-gradient(top, rgb(225, 245, 225) 0%, rgb(245, 255, 245) 50%, rgb(225, 245, 225) 100%);
+	background-image: linear-gradient(top, rgb(225, 245, 225) 0%, rgb(245, 255, 245) 50%, rgb(225, 245, 225) 100%);
+}
+#createVM .setup > div > div.content > div.image > img {
+	float: left;
+}
+#createVM .setup > div > div.content input.textInput {
+	border-top: 0px solid rgb(0, 0, 0);
+	border-left: 0px solid rgb(0, 0, 0);
+	border-right: 0px solid rgb(0, 0, 0);
+	border-bottom: 1px solid rgb(100, 100, 100);
+	background: rgba(250, 250, 250, 0);
+	width: 180px;
+	font-size: 1.5em;
+	padding-left: 5px;
+	color: rgb(60, 60, 60);
+}
+#createVM .setup > div > div.content input.dateInput {
+	border-top: 0px solid rgb(0, 0, 0);
+	border-left: 0px solid rgb(0, 0, 0);
+	border-right: 0px solid rgb(0, 0, 0);
+	border-bottom: 1px solid rgb(100, 100, 100);
+	background: rgba(250, 250, 250, 0);
+	width: 95px;
+	padding-top:5px;
+	font-size: 1.2em;
+	/* padding-left: 5px; */
+	margin-left:20px;
+	text-align:center;
+	color: rgb(60, 60, 60);
+
+}
+#createVM .selectItem{
+	
+	font-size: 1em;
+	padding-left: 5px;
+	margin-left:100px;
+	color: rgb(60, 60, 60);
+}
+#createVM .setup > div >div.content p.label{
+	width: 5px;
+	font-weight: bold;
+	text-align: right;
+}
+#createVM .setup > div#stepFinal > div.content .vm_info > fieldset div,
+#createVM .setup > div#stepFinal > div.content .vm_contact_info > fieldset div {
+	clear: both;
+	padding-left: 0px;
+	text-align: center;
+	width: 100%;
+}
+#createVM .setup > div#stepFinal > div.content .vm_info > fieldset div > p,
+#createVM .setup > div#stepFinal > div.content .vm_contact_info > fieldset div > p {
+	float: left;
+	margin: 0px;
+	line-height: 40px;
+	font-size: 1.2em;
+}
+#createVM .setup > div#stepFinal > div.content .vm_info > fieldset div > p.label,
+#createVM .setup > div#stepFinal > div.content .vm_contact_info > fieldset div > p.label {
+	width: 150px;
+	font-weight: bold;
+	text-align: right;
+}
+#createVM .setup > div#stepFinal > div.content .vm_info > fieldset div > p.value,
+#createVM .setup > div#stepFinal > div.content .vm_contact_info > fieldset div > p.value {
+	width: 200px;
+	display: block;
+	text-align: right;
+	padding-right: 10px;
+}
+
+#createVM .setup > div#stepFinal > div.content .vm_info > fieldset div > p.unit,
+#createVM .setup > div#stepFinal > div.content .vm_contact_info > fieldset div > p.unit {
+	font-size: 8pt;
+	padding-top: 8px;
+	padding-right: 10px;
+	margin-left: 10px;
+	color: rgb(150, 200, 150);
+}
+
+#createVM .operate {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(50, 50, 50, .3);
+	z-index: 0;
+	overflow: auto;
+	z-index: 1000;
+}
+#createVM .operate a {
+	position: fixed;
+	top: 200px;
+	cursor: pointer;
+	font-weight: bold;
+	color: rgb(250, 180, 50);
+	text-shadow: 0px 0px 5px rgb(150, 150, 150);
+	font-size: 5em;
+}
+#createVM .operate a:hover {
+	color: rgb(250, 130, 0);
+	text-shadow: 0px 0px 5px rgb(200, 200, 200);
+}
+#createVM .operate a.close {
+	top: 50px;
+	left: 50%;
+	font-size: 1em;
+	width: 36px;
+	height: 36px;
+	margin-left: 300px;
+	background: url(../../res/close.png);
+	z-index: 10;
+}
+#createVM .operate a.back {
+	left: 50%;
+	margin-left: -400px;
+}
+#createVM .operate a.next {
+	left: 50%;
+	margin-left: 340px;
+}
+#createVM .operate > div {
+	position: absolute;
+	top: 70px;
+	left: 50%;
+	margin-left: -340px;
+}
+
+#createVM .operate .setup .dataset {
+	width: 90%;
+	line-height: 35px;
+	height: 40px;
+	/* padding-left: 150px; */
+	padding-left: 100px;
+	display: block;
+	clear: both;
+}
+#createVM .operate .setup .dataset > h3 {
+	margin: 0px;
+	float: left;
+}
+#createVM .operate .setup .dataset > input {
+	float: left;
+	margin-left: 20px;
+	margin-right: 10px;
+}
+#createVM .operate .setup .dataset > input.ipcheckbox {
+	float: left;
+	margin-left: 100px;
+	margin-top:13px;
+}
+#createVM .operate .setup .dataset > input.checkbox {
+	float: left;
+	margin-left: 60px;
+	margin-top:13px;
+}
+#createVM .operate .setup .dataset > label{
+	float:left;
+	margin-left:2px;
+}
+#createVM .operate .setup .dataset > h4 {
+	float: right;
+	border: 0px solid rgba(255, 255, 255, 0);
+	background: rgba(255, 255, 255, 0);
+	margin: 0px;
+	margin-right: 230px;
+}
+#createVM .operate .setup .dataset h4.cpu:after {
+	content: 'cores';
+
+	font-size: 8pt;
+	padding-top: 8px;
+	padding-right: 10px;
+	margin-left: 10px;
+	color: rgb(150, 200, 150);
+}
+#createVM .operate .setup .dataset h4.ram:after {
+	content: 'MB';
+
+	font-size: 8pt;
+	padding-top: 8px;
+	padding-right: 10px;
+	margin-left: 10px;
+	color: rgb(150, 200, 150);
+}
+#createVM .operate .setup .dataset h3.disksize {
+	float: right;
+	margin-right: 128px;
+	font-size: 8pt;
+	margin-left: 10px;
+	color: rgb(150, 200, 150);
+	margin-right: 165px;
+}
+#createVM .operate .setup .dataset h4.disk:after {
+	content: 'GB';
+
+	font-size: 8pt;
+	padding-top: 8px;
+	padding-right: 10px;
+	margin-left: 10px;
+	color: rgb(150, 200, 150);
+}
+#createVM .operate .setup .dataset h4.ip:after {
+	content: 'Enable';
+
+	font-size: 8pt;
+	padding-top: 8px;
+	padding-right: 10px;
+	margin-left: 10px;
+	color: rgb(150, 200, 150);
+}
+
+#createVM .operate .setup .dataset > h3.os_image {
+	white-space: nowrap;
+	border-top: 0px solid black;
+	border-left: 0px solid black;
+	border-right: 0px solid black;
+	border-bottom: 1px solid #646464;
+	background: rgba(250, 250, 250, 0);
+	width: 180px;	
+	padding-left: 5px;
+	color: #3C3C3C;
+	margin-left: 20px;
+	height: 30px;
+	cursor: pointer;
+}
+
+#createVM .operate .setup .dataset > button.chooseOSImage {
+	float: right;
+	margin-right: 165px;	
+}
+
+#createVM .setup > div > div.content > .vm_info{
+	/* margin-bottom: 10px; */
+}
+
+#createVM .setup > div > div.content > .vm_info  legend:hover{
+	cursor: pointer;
+}
+
+#createVM .setup > div > div.content > .vm_contact_info fieldset {
+	border: none;
+}
+
+.imageChooseDialog {
+	padding: 10px;
+	
+	/* 20140110 shine add */
+	height: 470px;
+	overflow-y: auto;
+	width: 97%;
+	overflow-x: hidden;
+}
+
+.imageChooseDialog > div.image {
+	position: relative;
+	cursor: pointer;
+	padding: 5px;
+	margin: 8px;
+	width: 270px;
+	height: 70px;
+	float:left;
+	border-top: 1px solid rgb(250, 250, 250);
+	border-bottom: 1px solid rgb(150, 150, 150);
+	border-left: 1px solid rgb(200, 200, 200);
+	border-right: 1px solid rgb(200, 200, 200);
+	border-radius: 5px;
+	
+	background: rgb(230, 230, 230);
+	background-image: -ms-linear-gradient(top, rgb(245, 245, 245) 0%, rgb(215, 215, 215) 100%);
+	background-image: -moz-linear-gradient(top, rgb(245, 245, 245) 0%, rgb(215, 215, 215) 100%);
+	background-image: -webkit-linear-gradient(top, rgb(245, 245, 245) 0%, rgb(215, 215, 215) 100%);
+	background-image: linear-gradient(top, rgb(245, 245, 245) 0%, rgb(215, 215, 215) 100%);
+	box-shadow: 0px 1px 2px rgba(30, 30, 30, .3);
+	
+	text-shadow: rgb(250, 250, 250) 0 -1px 0;
+}
+.imageChooseDialog > div.image > img {
+	float: left;
+	position: relative;
+}
+.imageChooseDialog > div.image p {
+	font-weight: bold;
+	font-size: 0.9em;
+	word-wrap: break-word;
+	word-break: normal;
+	width: 185px;
+	margin-left: 75px;
+	z-index: 5;
+	text-align: center;
+}
+.imageChooseDialog > div.image > p.template_name_p {
+	position: absolute;
+}
+.imageChooseDialog > div.image > p.template_size_p {
+	position: absolute;
+	bottom: -10px;
+	right:0px;
+	color: #DF7E05;
+	width: 150px;
+}
+.imageChooseDialog > div.select {
+	border-bottom: 1px solid rgb(250, 250, 250);
+	box-shadow: 0px 0px 0px rgba(30, 30, 30, .3);
+
+	background-image: -ms-linear-gradient(top, rgb(225, 245, 225) 0%, rgb(245, 255, 245) 50%, rgb(225, 245, 225) 100%);
+	background-image: -moz-linear-gradient(top, rgb(225, 245, 225) 0%, rgb(245, 255, 245) 50%, rgb(225, 245, 225) 100%);
+	background-image: -webkit-linear-gradient(top, rgb(225, 245, 225) 0%, rgb(245, 255, 245) 50%, rgb(225, 245, 225) 100%);
+	background-image: linear-gradient(top, rgb(225, 245, 225) 0%, rgb(245, 255, 245) 50%, rgb(225, 245, 225) 100%);
+}
+
+.vm_info_expand {
+ 	background-image: url(../../res/sort_desc.png);
+	background-size: 100% 100%;
+	width: 24px;
+	height: 24px; 
+	float: left;
+	position: relative;
+	top: -5px;	
+}	
+
+.vm_info_collapse {
+ 	background-image: url(../../res/sort_asc.png);
+	background-size: 100% 100%;
+	width: 24px;
+	height: 24px;	 	
+	float: left;	
+	position: relative;
+	top: 0px;	
+}
+
+.vm_info_remove {
+	background-image: url(../../res/close.png);
+	background-size: 100% 100%;
+	width: 24px;
+	height: 24px;
+	float: right;
+	position: relative;
+	top: -25px;
+	cursor: pointer;
+}
+#createVM .vmPrice {
+	float: left;
+	border: 0px solid rgba(255, 255, 255, 0);
+	background: rgba(255, 255, 255, 0);
+	margin-top: -35px;
+	margin-left: 305px;
+	height: 10px;
+}
+#createVM .ipPrice {
+	float: left;
+	border: 0px solid rgba(255, 255, 255, 0);
+	background: rgba(255, 255, 255, 0);
+	margin-top: -37px;
+	margin-left: 305px;
+	height: 10px;
+}

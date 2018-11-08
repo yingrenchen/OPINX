@@ -1,0 +1,11 @@
+﻿.modal-content .tip_div {
+	margin-bottom: 10px;
+    margin: 0px 1px 10px 1px;
+    background: rgb(254, 242, 206);
+    padding: 8px;
+    border-radius: 5px;
+    color: rgb(163, 139, 32);
+}
+.modal-content .tip_div i{
+	margin-right: 5px;
+}

@@ -1,0 +1,96 @@
+#regist {
+	z-index: 99999;
+	width: 1000px;
+	
+	position: fixed;
+	left: 50%;
+	margin-left: -500px;
+	top: 100px;
+}
+
+#regist a.close {
+	position: absolute;
+	font-size: 1em;
+	width: 36px;
+	height: 36px;
+	margin-left: 980px;
+	top: 0px;
+	background: url(../../res/close.png);
+	z-index: 10;
+	display: block;
+	cursor: pointer;
+}
+
+#regist form {
+	background: #CEEFCE;
+	background: rgba(250, 255, 250, .9);
+	padding: 20px;
+	border: #FFFFFF;
+	border-radius: 10px;
+
+	-moz-box-shadow: 0 0 6px rgba(30, 30, 30, 0.8);
+    -webkit-box-shadow: 0 0 6px rgba(30, 30, 30, 0.8);
+	box-shadow: 0 0 6px rgba(30, 30, 30, 0.8);
+}
+
+#regist form fieldset {
+	padding-left: 20px;
+	padding-top: 35px;
+
+	text-align: left;
+	border: 1px solid #99CCAA;
+	border-radius: 5px;
+	color: #333333;
+	background: #EEFEEE;
+	margin-bottom: 20px;
+}
+
+#regist form fieldset legend {
+	position: absolute;
+	margin-top: -30px;
+	
+	font-size: 1.5em;
+	font-weight: bold;
+	color: #336644;
+}
+
+#regist form fieldset label {
+	float: left;
+	text-align: right;
+	width: 150px;
+	line-height: 2em;
+	display: block;
+	background: #9AC3AA;
+	color: #DDEDDD;
+	font-weight: bold;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	padding-right: 15px;
+	margin-top: 5px;
+}
+
+#regist form fieldset input {
+	float: left;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border: 1px solid #BEEEBE;
+	background: #FAFFFA;
+	/* line-height: 2em; */
+	height: 2em;
+	width: 18em;
+	text-align: center;
+	margin-right: 50px;
+	margin-top: 5px;
+}
+
+#regist form fieldset .dirty {
+	background: #FFCCCC;
+}
+
+#regist form fieldset button {
+	line-height: 2em;
+	text-align: center;
+	float: right;
+	margin-top: 3em;
+	
+}

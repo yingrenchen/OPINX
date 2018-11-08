@@ -1,0 +1,289 @@
+/* Tab的active樣式 */
+.panel-tabs.panel-tabs-border > li.active > a {
+  margin-top: -1px;
+  border-top: 2px solid rgb(169, 154, 99);
+}
+/* DataTable的樣式 */
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+  z-index: 2;
+  color: #ffffff;
+  background-color: rgb(169, 154, 99);
+  border-color: rgb(169, 154, 99);
+  cursor: default;
+}
+.pagination > li > a,
+.pagination > li > span {
+  position: relative;
+  float: left;
+  padding: 5px 12px;
+  line-height: 1.49;
+  text-decoration: none;
+  color: rgb(169, 154, 99);
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  margin-left: -1px;
+}
+.pagination > li > a:hover,
+.pagination > li > span:hover,
+.pagination > li > a:focus,
+.pagination > li > span:focus {
+  color: black;
+  background-color: #eeeeee;
+  border-color: #dddddd;
+}
+/* bg-role */
+.bg-role {
+  background-color: rgb(169, 154, 99) !important;
+  background-image: -webkit-linear-gradient(top,rgba(226,226,226,.1),rgba(34,34,34,.16));
+  color: #fff;
+}
+a.bg-role:hover {
+  background-color: #252832 !important;
+}
+.bg-role .text-muted {
+  color: #717eb2;
+}
+.bg-role .text-roleen {
+  color: #252832;
+}
+.bg-role.light {
+  background-color: #484d61 !important;
+}
+.bg-role.lighter {
+  background-color: #51566c !important;
+}
+.bg-role.dark {
+  background-color: rgb(169, 154, 99) !important;
+  background-image: -webkit-linear-gradient(top,rgba(226,226,226,.1),rgba(34,34,34,.16));
+}
+.bg-role.roleer {
+  background-color: #252832 !important;
+}
+.bg-role .open > a,
+.bg-role .open > a:hover,
+.bg-role .open > a:focus {
+  color: #ffffff;
+}
+.navbar.bg-role {
+  background-color: #e8a137;
+}
+.navbar.bg-role .nav > li.open > a,
+.navbar.bg-role .nav > li:hover > a,
+.navbar.bg-role .nav > li:focus > a,
+.navbar.bg-role .nav > li.active > a,
+.navbar.bg-role .nav > li > a:hover,
+.navbar.bg-role .nav > li > a:focus {
+  color: #FFF;
+  background-color: rgb(142, 117, 61);
+}
+.navbar.bg-role .nav > li.dropdown.open .dropdown-menu,
+.navbar.bg-role .nav > li.dropdown .open .dropdown-menu {
+  border-top-color: #e8a137;
+}
+.navbar.bg-role .nav > li.dropdown.open .dropdown-menu:after,
+.navbar.bg-role .nav > li.dropdown .open .dropdown-menu:after {
+  border-bottom-color: #e8a137;
+}
+.navbar.bg-role .nav > li.dropdown.open .dropdown-menu:after,
+.navbar.bg-role .nav > li.dropdown .open .dropdown-menu:after {
+  border-bottom-color: #e8a137;
+}
+.navbar.bg-role .nav > li .dropdown-toggle + .dropdown-menu > .active > a,
+.navbar.bg-role .nav > li .dropdown-toggle + .dropdown-menu > .active > a:hover,
+.navbar.bg-role .nav > li .dropdown-toggle + .dropdown-menu > .active > a:focus {
+  color: #FFF;
+  background-color: #e8a137;
+}
+/* btn-role */
+.btn-role {
+  color: #ffffff !important;
+  background-color: rgb(169, 154, 99);
+}
+.btn-role:hover,
+.btn-role:focus,
+.btn-role:active,
+.btn-role.active,
+.open > .dropdown-toggle.btn-role {
+  color: #ffffff;
+  background-color: rgb(142, 117, 61);
+  border-color: rgba(0, 0, 0, 0.05);
+}
+.btn-role:active,
+.btn-role.active,
+.open > .dropdown-toggle.btn-role {
+  background-image: none;
+}
+.btn-role.disabled,
+.btn-role[disabled],
+fieldset[disabled] .btn-role,
+.btn-role.disabled:hover,
+.btn-role[disabled]:hover,
+fieldset[disabled] .btn-role:hover,
+.btn-role.disabled:focus,
+.btn-role[disabled]:focus,
+fieldset[disabled] .btn-role:focus,
+.btn-role.disabled:active,
+.btn-role[disabled]:active,
+fieldset[disabled] .btn-role:active,
+.btn-role.disabled.active,
+.btn-role[disabled].active,
+fieldset[disabled] .btn-role.active {
+  background-color: rgb(200, 183, 109);
+  border-color: rgb(200, 183, 109);
+}
+.btn-role .badge {
+  color: #F5AE1C;
+  background-color: #ffffff;
+}
+.btn-role.light {
+  background-color: #f7c65f;
+}
+.btn-role.light:hover,
+.btn-role.light:focus,
+.btn-role.light:active,
+.btn-role.light.active,
+.open > .dropdown-toggle.btn-role.light {
+  background-color: #f5b025;
+}
+.btn-role.dark {
+  background-color: #f5b025;
+}
+.btn-role.dark:hover,
+.btn-role.dark:focus,
+.btn-role.dark:active,
+.btn-role.dark.active,
+.open > .dropdown-toggle.btn-role.dark {
+  background-color: #efa50b;
+}
+.btn.btn-alt.btn-role {
+  border-left-color: #F5AE1C;
+}
+.dropdown-toggle.btn-role + .dropdown-menu > .active > a,
+.dropdown-toggle.btn-role + .dropdown-menu > .active > a:hover,
+.dropdown-toggle.btn-role + .dropdown-menu > .active > a:focus {
+  color: #FFF;
+  background-color: #F5AE1C;
+}
+
+/*==================================================================
+  TEMP NEW INPUT FOCUS TRANSITION - REMOVE OR IMPLEMENT
+===================================================================*/
+.admin-form.theme-role .gui-input,
+.admin-form.theme-role .select > select,
+.admin-form.theme-role .select-multiple select {
+  outline: 1px solid transparent;
+  -webkit-transition: outline-color 0.5s ease;
+  transition: outline-color ease 0.5s ease;
+}
+.admin-form.theme-role .gui-input:focus,
+.admin-form.theme-role .select > select:focus,
+.admin-form.theme-role .select-multiple select:focus {
+  border-radius: 0;
+  outline-color: #f6bb42;
+}
+/* This file creates and combines all of the AdminForm color skins.
+ * To minimize file size, we recommended using only one or two skins.
+ * However, we have provided this file as it proves useful for demonstrating
+ * all of skins or for enabling true multi-skin support. 
+ */
+.admin-form.theme-role .section-divider span {
+  color: #f6bb42;
+}
+.admin-form.theme-role .tagline span {
+  color: #f6bb42;
+}
+.admin-form.theme-role .theme-link {
+  color: #f6bb42;
+}
+.admin-form.theme-role .gui-input:hover,
+.admin-form.theme-role .gui-textarea:hover,
+.admin-form.theme-role .role-textarea:focus,
+.admin-form.theme-role .role-select:focus,
+.admin-form.theme-role .select > select:hover,
+.admin-form.theme-role .select-multiple select:hover,
+.admin-form.theme-role .gui-input:hover ~ .input-footer,
+.admin-form.theme-role .file .gui-file:hover + .gui-input,
+.admin-form.theme-role .gui-textarea:hover ~ .input-footer {
+  border-color: #ffce54;
+}
+.admin-form.theme-role .gui-input:focus,
+.admin-form.theme-role .gui-textarea:focus,
+.admin-form.theme-role .select > select:focus,
+.admin-form.theme-role .select-multiple select:focus,
+.admin-form.theme-role  select:focus,
+.admin-form.theme-role  textarea:focus{
+  border-color: #ffce54;
+  color: #3C3C3C;
+}
+.admin-form.theme-role .gui-textarea:focus {
+  height: 120px;
+}
+.admin-form.theme-role .select > select:focus {
+  z-index: 10;
+  z-index: 20\9;
+}
+.admin-form.theme-role .gui-input:focus ~ .field-icon i,
+.admin-form.theme-role .gui-textarea:focus ~ .field-icon i {
+  color: #f6bb42;
+}
+.admin-form.theme-role .select-multiple select:focus,
+.admin-form.theme-role .gui-input:focus ~ .input-footer,
+.admin-form.theme-role .gui-textarea:focus ~ .input-footer,
+.admin-form.theme-role .file .gui-file:focus + .gui-input {
+  border-color: #ffce54;
+}
+.admin-form.theme-role .select > select:focus + .arrow {
+  color: #f6bb42;
+}
+.admin-form.theme-role .rating:hover .rating-star:hover,
+.admin-form.theme-role .rating:hover .rating-star:hover ~ .rating-star,
+.admin-form.theme-role .rating-input:checked ~ .rating-star {
+  color: #f6bb42;
+}
+.admin-form.theme-role .rating-star,
+.admin-form.theme-role .rating:hover .rating-star {
+  color: #A2A6A8;
+}
+.admin-form.theme-role .ui-datepicker .ui-datepicker-prev,
+.admin-form.theme-role .ui-datepicker .ui-datepicker-next,
+.admin-form.theme-role .ui-datepicker .ui-datepicker-title {
+  color: #f6bb42;
+}
+.admin-form.theme-role .ui-datepicker-today a,
+.admin-form.theme-role .ui-datepicker-today a:hover,
+.admin-form.theme-role .ui-datepicker .ui-state-highlight {
+  background: #fbdea3 !important;
+}
+.admin-form.theme-role .ui-datepicker .ui-state-active {
+  background: #f6bb42 !important;
+}
+.admin-form.theme-role .ui-datepicker .ui-timepicker-div .ui-slider .ui-slider-handle.ui-state-active {
+  background: #FFF !important;
+}
+.admin-form.theme-role .ui-datepicker .ui-timepicker-div .ui-slider .ui-slider-handle {
+  border-color: #f6bb42;
+}
+.admin-form.theme-role .ui-datepicker .ui-timepicker-div .ui-slider .ui-slider-handle:before {
+  background-color: #f6bb42;
+}
+.admin-form.theme-role .wizard .steps li a,
+.admin-form.theme-role .wizard .actions li a {
+  background-color: #f6bb42;
+}
+.admin-form.theme-role .wizard .steps li.current a {
+  background-color: #f4af22;
+}
+.admin-form .slider-wrapper.slider-primary .ui-slider .ui-slider-range {
+  background-color: rgb(169, 154, 99);
+}
+.admin-form .slider-wrapper.slider-primary .ui-slider .ui-slider-handle {
+  border-color: rgb(169, 154, 99);
+}
+.admin-form .slider-wrapper.slider-primary .ui-slider .ui-slider-handle:before {
+  background-color: rgb(169, 154, 99);
+}

@@ -1,0 +1,91 @@
+#mainmenu {
+	position: fixed;
+	left: 0%;
+	top: 0px;
+	margin-left: 5px;
+	
+	padding-left: 3px;
+	padding-right: 3px;
+
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	background: rgba(235, 235, 235, 1);
+	border: solid 1px rgba(255, 255, 255, 1);
+
+	-webkit-box-shadow: 0 0 10px rgba(90, 80, 65, 0.5);
+	-moz-box-shadow: 0 0 10px rgba(90, 80, 65, 0.5);
+	box-shadow: 0 0 10px rgba(90, 80, 65, 0.5);
+}
+#mainmenu a {
+	padding: 5px;
+	line-height: 40px;
+
+	float: left;
+	margin-left: 1px;
+	margin-right: 1px;
+	margin-top: 1px;
+	border-top: 1px solid rgba(255, 255, 245, 0);
+	border-bottom: 1px solid rgba(255, 255, 245, 0);
+	border-radius: 5px;
+	background: rgba(230, 230, 230, 1);
+
+	cursor: pointer;
+	text-shadow: 0px 0px 0px rgba(60, 60, 60, 1);
+}
+#mainmenu a::before {
+	position: fixed;
+	margin-right: 5px;
+	content: "*";
+	color: rgba(200, 200, 180, 1);
+}
+#mainmenu a h3 {
+	margin: 2px;
+	margin-left: 15px;
+	line-height: 16px;
+	font-size: 16pt;
+	color: rgba(150, 150, 130, 1);
+}
+#mainmenu a h4 {
+	margin: 2px;
+	margin-left: 15px;
+	line-height: 14px;
+	font-size: 8pt;
+	color: rgba(160, 160, 160, 1);
+}
+#mainmenu a:hover {
+	border-top: 1px solid rgba(255, 255, 235, 1);
+	border-bottom: 1px solid rgba(185, 185, 165, 1);
+	background: rgba(245, 245, 155, 1);
+	background: -webkit-gradient(	linear, center top, center bottom, 
+					color-stop(0, rgba(245, 245, 155, 1)), 
+					color-stop(1, rgba(235, 235, 155, 1)));
+	background: -moz-linear-gradient(top, rgba(245, 245, 155, 1), rgba(245, 245, 155, 1) 100%);
+}
+#mainmenu a:hover:before {
+	color: rgba(250, 250, 230, 1);
+	text-shadow: 0px 1px 0px rgba(200, 200, 120, 1);
+}
+#mainmenu a:hover h3 {
+	color: rgba(66, 33, 15, 1);
+}
+#mainmenu a:hover h4 {
+	color: rgba(160, 155, 100, 1);
+}
+
+#mainmenu a.used {
+	border-top: 1px solid rgba(255, 255, 235, 1);
+	border-bottom: 1px solid rgba(255, 255, 235, 1);
+	border-left: 1px solid rgba(185, 185, 165, 1);
+	border-right: 1px solid rgba(185, 185, 165, 1);
+	background: rgba(255, 255, 145, 1);
+}
+#mainmenu a.used::before {
+	color: rgba(200, 200, 120, 1);
+	text-shadow: 0px 1px 0px rgba(250, 250, 250, 1);
+}
+#mainmenu a.used h3 {
+	color: rgba(66, 33, 15, 1);
+}
+#mainmenu a.used h4 {
+	color: rgba(160, 155, 100, 1);
+}

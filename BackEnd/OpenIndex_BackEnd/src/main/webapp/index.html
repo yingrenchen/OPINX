@@ -1,0 +1,66 @@
+<html>
+
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>prototype</title>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script src="js/rollups/tripledes.js"></script>
+<script src="js/components/mode-ecb.js"></script>
+<script src="js/authDatahelper.js"></script>
+<script>
+    function sendToHost() {
+        // 取得使用者驗證資訊AuthData
+        var accountNameStr = $.trim($('#accountName').val());
+        var passwordStr = $.trim($('#password').val());
+        var authDataStr = _getAuthData(accountNameStr, passwordStr);
+        // 組合要送給主機的JSON字串
+        var reqData = {};
+        reqData.accountName = accountNameStr;
+        reqData.authData = authDataStr;
+        reqData.method = "accountService";
+        var argsO = {};
+        argsO.action = "login";
+        reqData.args = argsO;
+        // 送出JSON字串
+        var xhr = new XMLHttpRequest();
+        var url = "http://" + $.trim($('#hostIP').val()) + ":8080/prototype/restAPI/";
+        xhr.open('POST', url, true);
+        xhr.setRequestHeader('Content-type', 'application/json');
+        xhr.onload = function() {
+            // 收到並顯示JSON字串
+            var respData = JSON.parse(this.responseText);
+            document.getElementById("respStr").innerHTML = JSON.stringify(respData, undefined, 2);
+        };
+        xhr.send(JSON.stringify(reqData));
+        document.getElementById("reqStr").innerHTML = JSON.stringify(reqData, undefined, 2);
+    }
+    // 清除JSON資訊
+    function cleanTextArea(){
+        document.getElementById("respStr").innerHTML = "";
+        document.getElementById("reqStr").innerHTML = "";
+        $('#accountName').val("");
+        $('#password').val("");
+    }
+    </script>
+</head>
+
+<body>
+    <h1>REST API : AccountService login</h1>
+    <label>後端主機ip</label>
+    <input type="text" id="hostIP"  size="36" />
+    <BR>
+    <label>帳號</label>
+    <input type="text" id="accountName"  size="36" />
+    <label>密碼</label>
+    <input type="text" id="password" size="36" /> 
+    <input type="button" value="登入" onclick="sendToHost();" />
+    <input type="button" value="清除" onclick="cleanTextArea();" />
+    <BR>
+    <label>送出的JSON</label>
+    <textarea id="reqStr" rows="10" cols="100" readonly></textarea>
+    <BR>
+    <label>收到的JSON</label>
+    <textarea id="respStr" rows="18" cols="100" readonly></textarea>
+</body>
+
+</html>

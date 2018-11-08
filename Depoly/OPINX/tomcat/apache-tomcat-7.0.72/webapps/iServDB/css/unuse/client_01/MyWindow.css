@@ -1,0 +1,46 @@
+.myWindow {
+	background: rgb(230, 240, 255);
+	position: absolute;
+	left: 230px;
+	top: 110px;
+	
+	border: 1px solid rgb(255, 255, 255);
+	border-top-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	
+	box-shadow: 0px 0px 3px rgba(30, 30, 30, .5);
+	z-index:1004;
+}
+
+.myWindow .close {
+	cursor: pointer;
+	width: 36px;
+	height: 36px;
+	display: block;
+	background: url(../../res/close.png);
+
+	margin-top: -20px;
+	margin-right: -20px;
+	float: right;
+}
+
+.myWindow .content {
+	padding: 10px;
+	top: -20px;
+}
+
+.myWindow .title {
+	width: 96%;
+	text-align: center;
+	font-size: 1.2em;
+	margin-top: 5px;
+	margin-left: 20px;
+	background-color: #3A899B;
+	color: white;
+	cursor: move;	
+}
+
+.myWindow #widgetArea {
+	background: none;
+	padding: 0px;
+}

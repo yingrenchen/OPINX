@@ -1,0 +1,243 @@
+#topBar {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 45px;
+	min-width: 800px;
+	
+	z-index: 999;
+}
+
+#topBar #mainmenu {
+	left: 0px;
+	top: 0px;
+
+	background: #F3F8FA;
+	text-transform: uppercase;
+	min-width: 640px;
+	height: 45px;
+	width: 80%;
+
+	border-bottom: 1px solid #CBE0E8;
+}
+
+#topBar .quickIcon {
+	cursor: pointer;
+	float: left;
+	border: 1px solid rgb(200, 220, 240);
+	border-radius: 5px;
+	line-height: 33px;
+	height: 33px;
+	margin: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	color: rgb(255, 255, 255);
+	text-shadow: 0px 1px 1px rgb(180, 200, 230);
+	box-shadow: 0px 0px 3px rgb(255, 255, 255);
+	background: rgb(200, 230, 240);
+	background-image: -ms-linear-gradient(top, rgb(200, 230, 240) 0%, rgb(150, 180, 230) 100%);
+	background-image: -moz-linear-gradient(top, rgb(200, 230, 240) 0%, rgb(150, 180, 230) 100%);
+	background-image: -webkit-linear-gradient(top, rgb(200, 230, 240) 0%, rgb(150, 180, 230) 100%);
+	background-image: linear-gradient(top, rgb(200, 230, 240) 0%, rgb(150, 180, 230) 100%);
+}
+#topBar #Home {
+	background: rgb(15, 103, 161);
+}
+
+/*
+#topBar #mainmenu a {
+	font-family: "Helvetica";
+	padding: 0px;
+	float: left;
+	height: 45px;
+	line-height: 45px;
+	cursor: pointer;
+}
+
+#topBar #mainmenu a h3 {
+	margin: 0px;
+	font-size: 1em;
+	color: #6677aa;
+	
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+#topBar #mainmenu a h4 {
+	margin: 0px;
+	font-size: 0.5em;
+	color: #88AACC;
+	
+	display: none;
+}
+*/
+
+#topBar #user {
+	position: fixed;
+	right: 0px;
+	top: 0px;
+	
+	background: #F3FAF3;
+	color: #6EAF6E;
+	min-width: 280px;
+	height: 45px;
+	width: 35%;
+	padding-left: 10px;
+
+	display: block;
+	border-bottom: 1px solid #D6E4D9;
+}
+
+#topBar #user #userInfo {
+	float: right;
+	padding-top: 5px;
+}
+
+#topBar #user #userInfo #userName {
+	font-size: 1.2em;
+	font-weight: bold;
+	text-align: right;
+}
+
+#topBar #user #userInfo #userRole {
+	font-size: 0.8em;
+	font-weight: bold;
+	text-align: right;
+}
+
+#topBar #user #accountAction {
+	margin-left: 10px;
+	margin-right: 0px;
+	float: right;
+	display: block;
+	height: 45px;
+	cursor: pointer;
+	
+	border-bottom: 1px solid #C6D4C9;
+
+	background: #C9EAD1;
+}
+
+#topBar #user #noticationArea{
+	margin-left: -100px;
+	margin-right: 0px;
+	float: left;
+	display: block;
+	cursor: pointer;	
+}
+
+
+
+/*
+#topBar #user #accountAction::before {
+	content: "▼";
+	line-height: 45px;
+	font-size: 0.8em;
+	margin-left: 5px;
+}
+*/
+#topBar #user #accountAction #accountMenu {
+	display: block;
+	margin-top: 0px;
+	margin-left: 0px;
+	padding: 0px;
+	background: #C0E0C0;
+
+	list-style-type: none;
+}
+
+#topBar #user #accountAction #accountMenu li {
+	text-align: center;
+	width: 80px;
+	height: 40px;
+	line-height: 40px;
+	float: left;
+	background: #C9EAD1;
+	
+
+	border-right: 1px solid #C6D4C9;
+	border-bottom: 3px solid rgb(100, 150, 100);
+}
+
+
+
+/**************************************************/
+.divNotification {
+	float: left;
+	margin-right: -1px;
+	position: relative;
+}
+
+.infoButton {
+	background-image:  url('../res/onebit_38.png');
+	background-repeat: no-repeat;
+	 background-position: center center;	 
+	 width:48px;
+	 height:48px; 
+	 border:0px;	 	 
+	display: block;
+	text-decoration: none;
+	margin: 0 1px;	 
+}
+
+
+.alertButton {
+	background-image:  url('../res/onebit_36.png');
+	background-repeat: no-repeat;
+	 background-position: center center;	 
+	 width:48px;
+	 height:48px; 
+	 border:0px;	 	 
+	display: block;
+	text-decoration: none;
+	margin: 0 1px;	 
+}
+
+
+.changeButton {
+	background-image:  url('../res/onebit_21.png');
+	background-repeat: no-repeat;
+	 background-position: center center;	 
+	 width:48px;
+	 height:48px; 
+	 border:0px;	 	 
+	display: block;
+	text-decoration: none;
+	margin: 0 1px;	 
+}
+.errorButton {
+	background-image:  url('../res/onebit_35.png');
+	background-repeat: no-repeat;
+	 background-position: center center;	 
+	 width:48px;
+	 height:48px; 
+	 border:0px;	 	 
+	display: block;
+	text-decoration: none;
+	margin: 0 1px;	 
+}
+.notificationCount {
+	background-color: #00376A;
+	color: white;
+	font-size: 1em;
+	font-weight: bold;
+	padding-bottom: 1px;
+	position: absolute;
+	right: -1px;
+	top: -1px;
+	z-index: 101;
+	display: none;
+}
+
+.notificationCount span {
+	border: solid 1px #D83722;
+	border-bottom: solid 1px #C0311E;
+	border-top: solid 1px #E23923;
+
+	padding: 0 1px;
+	background-color: #F03D25;
+	-webkit-border-radius: 2px;
+	display: block;
+
+}

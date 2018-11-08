@@ -1,0 +1,252 @@
+/* bg-role */
+.bg-role {
+  background: -webkit-gradient(linear,left top,left bottom,color-stop(0,#4e78c2),color-stop(1,#325da7)) !important;
+  background: -moz-linear-gradient(top, #4e78c2, #325da7) !important;
+  background: linear-gradient(to bottom, #4e78c2, #325da7) !important;
+  filter: progid: DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#4e78c2', endColorstr='#325da7') !important;
+  color: white;
+}
+a.bg-role:hover {
+  background-color: #217dbb !important;
+}
+.bg-role .text-muted {
+  color: #b0dbf8;
+}
+.bg-role .text-darken {
+  color: #217dbb;
+}
+.bg-role.light {
+  background-color: #4ea5e0 !important;
+}
+.bg-role.lighter {
+  background-color: #5faee3 !important;
+}
+.bg-role.dark {
+  background-color: #1369A2 !important;
+}
+.bg-role.darker {
+  background-color: #217dbb !important;
+}
+.bg-role .open > a,
+.bg-role .open > a:hover,
+.bg-role .open > a:focus {
+  color: #ffffff;
+}
+.navbar.bg-role {
+  background: -webkit-gradient(linear,left top,left bottom,color-stop(0,#4e78c2),color-stop(1,#325da7)) ;
+  background: -moz-linear-gradient(top, #4e78c2, #325da7) ;
+  background: linear-gradient(to bottom, #4e78c2, #325da7) ;
+  filter: progid: DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#4e78c2', endColorstr='#325da7') ;
+}
+.navbar.bg-role .nav > li.open > a,
+.navbar.bg-role .nav > li:hover > a,
+.navbar.bg-role .nav > li:focus > a,
+.navbar.bg-role .nav > li.active > a,
+.navbar.bg-role .nav > li > a:hover,
+.navbar.bg-role .nav > li > a:focus {
+  color: #FFF;
+  background: -webkit-gradient(linear,left top,left bottom,color-stop(0,#4e78c2),color-stop(1,#325da7));
+  background: -moz-linear-gradient(top, #4e78c2, #325da7) ;
+  background: linear-gradient(to bottom, #4e78c2, #325da7) ;
+  filter: progid: DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#4e78c2', endColorstr='#325da7') ;
+}
+.navbar.bg-role .nav > li.dropdown.open .dropdown-menu,
+.navbar.bg-role .nav > li.dropdown .open .dropdown-menu {
+  border-top-color: #2185C7 ;
+}
+.navbar.bg-role .nav > li.dropdown.open .dropdown-menu:after,
+.navbar.bg-role .nav > li.dropdown .open .dropdown-menu:after {
+  border-bottom-color: #2185C7 ;
+}
+.navbar.bg-role .nav > li.dropdown.open .dropdown-menu:after,
+.navbar.bg-role .nav > li.dropdown .open .dropdown-menu:after {
+  border-bottom-color: #2185C7 ;
+}
+.navbar.bg-role .nav > li .dropdown-toggle + .dropdown-menu > .active > a,
+.navbar.bg-role .nav > li .dropdown-toggle + .dropdown-menu > .active > a:hover,
+.navbar.bg-role .nav > li .dropdown-toggle + .dropdown-menu > .active > a:focus {
+  color: #FFF;
+  background-color: #2185C7 ;
+}
+/* btn-role */
+.btn-role {
+  color: #ffffff !important;
+  background-color: #3498db;
+}
+.btn-role:hover,
+.btn-role:focus,
+.btn-role:active,
+.btn-role.active,
+.open > .dropdown-toggle.btn-role {
+  color: #ffffff;
+  background-color: #2384c6;
+  border-color: rgba(0, 0, 0, 0.05);
+}
+.btn-role:active,
+.btn-role.active,
+.open > .dropdown-toggle.btn-role {
+  background-image: none;
+}
+.btn-role.disabled,
+.btn-role[disabled],
+fieldset[disabled] .btn-role,
+.btn-role.disabled:hover,
+.btn-role[disabled]:hover,
+fieldset[disabled] .btn-role:hover,
+.btn-role.disabled:focus,
+.btn-role[disabled]:focus,
+fieldset[disabled] .btn-role:focus,
+.btn-role.disabled:active,
+.btn-role[disabled]:active,
+fieldset[disabled] .btn-role:active,
+.btn-role.disabled.active,
+.btn-role[disabled].active,
+fieldset[disabled] .btn-role.active {
+  background-color: #3498db;
+  border-color: #3498db;
+}
+.btn-role .badge {
+  color: #3498db;
+  background-color: #ffffff;
+}
+.btn-role.light {
+  background-color: #4ea5e0;
+}
+.btn-role.light:hover,
+.btn-role.light:focus,
+.btn-role.light:active,
+.btn-role.light.active,
+.open > .dropdown-toggle.btn-role.light {
+  background-color: #2489cc;
+}
+.btn-role.dark {
+  background-color: #2489cc;
+}
+.btn-role.dark:hover,
+.btn-role.dark:focus,
+.btn-role.dark:active,
+.btn-role.dark.active,
+.open > .dropdown-toggle.btn-role.dark {
+  background-color: #2077b2;
+}
+.btn.btn-alt.btn-role {
+  border-left-color: #3498db;
+}
+.md-editor > .md-header .btn-group .btn-role {
+  color: #666;
+  border-color: rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+.dropdown-toggle.btn-role + .dropdown-menu > .active > a,
+.dropdown-toggle.btn-role + .dropdown-menu > .active > a:hover,
+.dropdown-toggle.btn-role + .dropdown-menu > .active > a:focus {
+  color: #FFF;
+  background-color: #3498db;
+}
+
+/*==================================================================
+  TEMP NEW INPUT FOCUS TRANSITION - REMOVE OR IMPLEMENT
+===================================================================*/
+.admin-form.theme-role .gui-input,
+.admin-form.theme-role .select > select,
+.admin-form.theme-role .select-multiple select {
+  outline: 1px solid transparent;
+  -webkit-transition: outline-color 0.5s ease;
+  transition: outline-color ease 0.5s ease;
+}
+.admin-form.theme-role .gui-input:focus,
+.admin-form.theme-role .select > select:focus,
+.admin-form.theme-role .select-multiple select:focus {
+  border-radius: 0;
+  outline-color: #5d9cec;
+}
+/* This file creates and combines all of the AdminForm color skins.
+ * To minimize file size, we recommended using only one or two skins.
+ * However, we have provided this file as it proves useful for demonstrating
+ * all of skins or for enabling true multi-skin support. 
+ */
+.admin-form.theme-role .section-divider span {
+  color: #3498db;
+}
+.admin-form.theme-role .tagline span {
+  color: #3498db;
+}
+.admin-form.theme-role .theme-link {
+  color: #3498db;
+}
+.admin-form.theme-role .gui-input:hover,
+.admin-form.theme-role .gui-textarea:hover,
+.admin-form.theme-role .select > select:hover,
+.admin-form.theme-role .select-multiple select:hover,
+.admin-form.theme-role .gui-input:hover ~ .input-footer,
+.admin-form.theme-role .file .gui-file:hover + .gui-input,
+.admin-form.theme-role .gui-textarea:hover ~ .input-footer {
+  border-color: #4ea5e0;
+}
+.admin-form.theme-role .gui-input:focus,
+.admin-form.theme-role .gui-textarea:focus,
+.admin-form.theme-role .role-textarea:focus,
+.admin-form.theme-role .role-select:focus,
+.admin-form.theme-role .select > select:focus,
+.admin-form.theme-role .select-multiple select:focus {
+  border-color: #4ea5e0;
+  color: #3C3C3C;
+}
+.admin-form.theme-role .gui-textarea:focus {
+  height: 120px;
+}
+.admin-form.theme-role .select > select:focus {
+  z-index: 10;
+  z-index: 20\9;
+}
+.admin-form.theme-role .gui-input:focus ~ .field-icon i,
+.admin-form.theme-role .gui-textarea:focus ~ .field-icon i {
+  color: #3498db;
+}
+.admin-form.theme-role .select-multiple select:focus,
+.admin-form.theme-role .gui-input:focus ~ .input-footer,
+.admin-form.theme-role .gui-textarea:focus ~ .input-footer,
+.admin-form.theme-role .file .gui-file:focus + .gui-input {
+  border-color: #4ea5e0;
+}
+.admin-form.theme-role .select > select:focus + .arrow {
+  color: #3498db;
+}
+.admin-form.theme-role .rating:hover .rating-star:hover,
+.admin-form.theme-role .rating:hover .rating-star:hover ~ .rating-star,
+.admin-form.theme-role .rating-input:checked ~ .rating-star {
+  color: #3498db;
+}
+.admin-form.theme-role .rating-star,
+.admin-form.theme-role .rating:hover .rating-star {
+  color: #A2A6A8;
+}
+.admin-form.theme-role .ui-datepicker .ui-datepicker-prev,
+.admin-form.theme-role .ui-datepicker .ui-datepicker-next,
+.admin-form.theme-role .ui-datepicker .ui-datepicker-title {
+  color: #3498db;
+}
+.admin-form.theme-role .ui-datepicker-today a,
+.admin-form.theme-role .ui-datepicker-today a:hover,
+.admin-form.theme-role .ui-datepicker .ui-state-highlight {
+  background: #8bc4ea !important;
+}
+.admin-form.theme-role .ui-datepicker .ui-state-active {
+  background: #3498db !important;
+}
+.admin-form.theme-role .ui-datepicker .ui-timepicker-div .ui-slider .ui-slider-handle.ui-state-active {
+  background: #FFF !important;
+}
+.admin-form.theme-role .ui-datepicker .ui-timepicker-div .ui-slider .ui-slider-handle {
+  border-color: #3498db;
+}
+.admin-form.theme-role .ui-datepicker .ui-timepicker-div .ui-slider .ui-slider-handle:before {
+  background-color: #3498db;
+}
+.admin-form.theme-role .wizard .steps li a,
+.admin-form.theme-role .wizard .actions li a {
+  background-color: #3498db;
+}
+.admin-form.theme-role .wizard .steps li.current a {
+  background-color: #2489cc;
+}

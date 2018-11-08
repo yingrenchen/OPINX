@@ -1,0 +1,85 @@
+#infobox {
+	z-index: 99998;
+	position: fixed;
+	top: 0%;
+	left: 40%;
+	margin-top: 40px;
+}
+#infobox div.msgbox {
+	display: none;
+
+	font-family: Calibri;
+	font-size: 12pt;
+
+	margin: 3px;
+	padding: 3px;
+
+	border: 1px solid rgba(255, 255, 255, 1);
+	border-radius: 5px;
+	background: rgba(230, 230, 230, 0.8);
+
+	-moz-box-shadow: 0 0 6px rgba(30, 30, 30, 0.8);
+    -webkit-box-shadow: 0 0 6px rgba(30, 30, 30, 0.8);
+	box-shadow: 0 0 6px rgba(30, 30, 30, 0.8);
+
+	z-index: 99998;
+}
+#infobox div.msgbox .title {
+	padding: 5px;
+	color: rgba(180, 160, 130, 1);
+
+	border: 1px solid rgba(255, 255, 255, 1);
+	border-radius: 5px;
+	background: rgba(250, 240, 230, 1);
+}
+#infobox div.msgbox .content {
+	margin: 1px;
+	padding: 5px;
+	color: rgba(180, 160, 130, 1);
+
+	border: 1px solid rgba(255, 255, 255, 1);
+	border-radius: 5px;
+	background: rgba(250, 240, 230, 1);
+}
+/* #infobox:hover .msgbox {
+    opacity: 1;
+    transition: all 0.5s ease 0s;
+}
+#infobox .msgbox  {
+    opacity: 0;
+    transition: all 0.5s ease 3s;
+} */
+/*demo button styles*/
+
+  .contextual-demo a {
+    padding: 9px 4px;
+    width: 9.5%;
+  }
+  .contextual-demo a + a {
+    margin-left: 0.5%;
+  }
+  .contextual-demo-alt a {
+    padding: 9px 4px;
+    width: 15%;
+  }
+  .contextual-demo-alt a + a {
+    margin-left: 0.5%;
+  }
+
+  /*responsive demo button styles*/
+  @media(max-width: 800px) {
+    .contextual-demo a {
+      padding: 9px 4px;
+      width: 23%;
+    }
+    .contextual-demo a + a {
+      margin-left: 0.5%;
+    }
+    .contextual-demo-alt a {
+      padding: 9px 4px;
+      width: 28%;
+    }
+    .contextual-demo-alt a + a {
+      margin-left: 0.5%;
+    }
+  }

@@ -1,0 +1,228 @@
+package org.iii.iSoftCloud.FrontEnd.BusinessSystem;
+
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Random;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.iii.iSoftCloud.FrontEnd.BusinessSystem.data.ResourceType;
+import org.iii.iSoftCloud.FrontEnd.BusinessSystem.log.BusinessLogger;
+import org.iii.iSoftCloud.FrontEnd.Library.Util.Translate;
+import org.iii.iSoftCloud.FrontEnd.Library.Util.ConvDate;
+import org.iii.iSoftCloud.FrontEnd.Library.Util.NotificationUtil;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import apiCall.data.Response;
+import apiCall.server.iii.keystonemanage.TokenAdd;
+
+/**
+ * 申請ip,寫入apply單
+ *
+ * @from    Basic
+ * @param 	request :{
+ *	"detail": "JSONObject",
+ *	"identity": "String",
+ *	"account": "String",
+ *	"tenantId": "JSONObject"
+ * }
+ * @return 	joParam :{
+ *	"ApplyID": "String"
+ * }
+ */
+@WebServlet("/ClientApplyIPService")
+public class ClientApplyIPService extends BasicProcessServlet {
+	private static final long serialVersionUID = 1L;
+	
+	protected String sVersion = "0.10.2012.06.001";
+	protected String sMethod = "post";	// get, post, put, delete, list
+       
+    /**
+     * @see BasicProcessServlet#BasicProcessServlet()
+     */
+    public ClientApplyIPService() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doAct(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		String strSQL = "";
+		String expirationDate = "10";
+		String stepvalue = "0";
+		String timestring = "";
+		
+		JSONObject objJSON = new JSONObject();
+		//get input parameter
+		JSONObject joParam = getParam(request);
+		BusinessLogger logger = new BusinessLogger(this.getClass().getName());
+		
+		//判斷是否自動審核服務
+		boolean autoValidate = false;
+		try {
+			autoValidate = getBSConfig().getBoolean("AutoValidate");
+		} catch(JSONException e) {
+			logger.warn(e.getMessage());
+		}
+		
+		try {
+			//read data
+			objJSON = joParam.getJSONObject("detail");
+			//20150501 佳誼 增加BusinessUI代客操作判斷(若有identity,且userType為Business的話,代表是代客操作)
+			if(!joParam.isNull("identity")){
+				if(joParam.getJSONObject("identity").getString("userType").equals("Business")){
+					objJSON.put("apply_operator_account", joParam.getString("account"));
+					objJSON.put("apply_operator_tenant", joParam.getString("tenantId"));
+					joParam.put("account", joParam.getJSONObject("identity").getString("userAccount"));
+					joParam.put("tenantId", String.valueOf(joParam.getJSONObject("identity").getInt("userTenant")));
+					joParam.remove("identity");
+				}
+			}
+			
+			//Create Token after 10 days 
+			TokenAdd tokenAdd = new TokenAdd(); 
+			Calendar cal = Calendar.getInstance();
+
+			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'hh:mm");
+			SimpleDateFormat TokendateStr = new SimpleDateFormat("yyyy/MM/dd hh:mm:ss");
+			
+			ConvDate nowTime = new ConvDate(cal.getTime()) ;
+			timestring = nowTime.convToStr(TokendateStr);
+			cal.setTime(TokendateStr.parse(timestring));
+			cal.add(Calendar.DATE, Integer.parseInt(expirationDate));
+			ConvDate expiratDay = new ConvDate(cal.getTime());
+			
+			//取得租戶的編號
+			strSQL = "select ta.account tenant, ua.id UID, ua.detail_information uinfo ,ua.name as contactName, ua.email as contactEmail from Tenant ta, UserAccount ua where ta.id = ua.tenant and ua.account = '"+joParam.getString("account") +"'";
+			JSONArray js = readDB(strSQL);
+			
+			objJSON.put("contact", js.getJSONObject(0).getString("contactName"));
+			objJSON.put("email",  js.getJSONObject(0).getString("contactEmail"));
+			objJSON.put("phone", new JSONObject(js.getJSONObject(0).getString("uinfo")).getString("phone"));
+				
+			long  ttamp = System.currentTimeMillis();
+			Random r = new Random(ttamp);
+			long applyidRam = r.nextInt();
+			if (applyidRam < 0) {
+				applyidRam = applyidRam * -1;
+			}
+			
+			String arg1 = String.valueOf(applyidRam);
+			String arg2 = joParam.getString("account");
+			String arg3 = js.getJSONObject(0).getString("tenant");
+			String arg4 = expiratDay.convToStr(sdf);
+			
+			Response resp = tokenAdd.run(arg1, arg2, arg3, arg4);
+
+			//判斷token是否正確被建立成功，才繼續後續寫入FrontEndDB
+			JSONObject respJSON = new JSONObject();
+			respJSON = (JSONObject)resp.data;
+			if (respJSON.getString("result").equals("error")) {
+				logger.warn("Token Add Failed");
+				this.myResult.setMessage("Token Add Failed");
+				this.myResult.setDATA(respJSON);
+				this.myResult.setResult(0);
+				return;
+			}	
+			
+			ConvDate end_date = new ConvDate(joParam.getString("resource_end") + " 23:59:59");
+			ConvDate start_date = new ConvDate(joParam.getString("resource_start") + " 00:00:00");	
+			ConvDate dt = new ConvDate();
+			long create_date = dt.convToSec();
+			
+			//判斷是否自動通過審核 for OuterAPI.
+			String IsOuterAPI = joParam.getString("source");
+			if (autoValidate && IsOuterAPI.equals("OuterAPI")) {
+				stepvalue = "1";
+			}else{
+				stepvalue = "0";
+			}
+			
+			//寫入申請單資料
+			strSQL = "INSERT INTO `Apply` (`id`, `account`, `tenant`, `token`,`apply_type`, `resource`, `action`, `detail`,  `resource_start`, `resource_end`,`progress_method`, `step`, `apply_time`, `commit_time`, `excuteTime`, `remark`, `reason`)" +
+					"VALUES (NULL, '" + joParam.getString("account") +"', '" + joParam.getString("tenantId") +"', '"+String.valueOf(applyidRam) +"','1', '"+ResourceType.Physical_IP+"', 'create', '"+ objJSON +"','" +start_date.convToSec() + "','" + end_date.convToSec() + "', '1', '"+stepvalue+"', UNIX_TIMESTAMP(), NULL, NULL, NULL, NULL)";
+			int intUpdate = writeDB(strSQL);
+			int IP_applyID = this.getAutoKey();
+			
+			//增加服務申請至Apply_to_do_list
+			String strSQL3 = "INSERT INTO `Apply_to_do_list` (`id`,`aid`, `account`, `resource_id`,`resource_type`, `resource_start`, `resource_end`, `action`,`detail`, `step`, `apply_time`, `commit_time`, `excuteTime`, `remark`, `updater`)" +
+					"VALUES (NULL,"+IP_applyID+", '" + joParam.getString("account") +"',NULL, '"+ResourceType.Physical_IP+"','" +start_date.convToSec() + "', '" + end_date.convToSec() + "','create', '"+ objJSON.toString() +"', '1', UNIX_TIMESTAMP(), NULL, NULL, NULL, NULL)";
+			int int_toDoListInsert = writeDB(strSQL3);	
+			
+			if (intUpdate != 0 && int_toDoListInsert != 0) {
+				// 取得申請單編號！
+				strSQL = "select max(id) id from Apply where account = '"+joParam.getString("account")+"' and token='"+String.valueOf(applyidRam)+"' ";
+				JSONArray jarid = readDB(strSQL);
+				
+				// 將申請服務寫入公告
+				Calendar calapply = Calendar.getInstance();
+				long applyStartTime = calapply.getTimeInMillis() / 1000;
+				SimpleDateFormat dateStr = new SimpleDateFormat("yyyy/MM/dd hh:mm:ss");
+				
+				
+				cal.setTime(dateStr.parse(timestring));
+				cal.add(Calendar.DATE, Integer.parseInt("3"));
+				ConvDate publishEndTime = new ConvDate(cal.getTime());
+				
+				NotificationUtil noti = new NotificationUtil();
+				noti.initialJob(this.jsonConfig);  //20131002 shine add 初始化參數
+
+				String bulletinContent = "Account (<|"+joParam.getString("account")+"|>) : "+"New Apply ! NO.<|<a href=\"#\" onclick=loadWidget(\"UserApplyValidate\")>"+jarid.getJSONObject(0).getString("id")+"</a>|>";
+				String[] mailContent = {"Account (%1) : New Apply ! NO.%2", joParam.getString("account"), jarid.getJSONObject(0).getString("id")};
+				int addbulletin = noti.addBulletein(translateText("Apply Service"), translateText(bulletinContent), js.getJSONObject(0).getString("UID"), "12", "0", applyStartTime, publishEndTime.convToSec(), 1, translateText(mailContent));
+				joParam.put("ApplyID", jarid.getJSONObject(0).getString("id"));
+				
+				String _packageID = "";
+				if(objJSON.has("package")){
+					_packageID = objJSON.getString("package");
+				}else{
+					_packageID = "-1";
+				}
+				
+				//ResourceType Name Select
+				String resourceType_Name = ""; 
+				String selectRType = "Select * From ResourceType Where id = "+ResourceType.Physical_IP;
+				JSONArray RTypequery = readDB(selectRType);
+				if(RTypequery.length() != 0){
+					resourceType_Name = RTypequery.getJSONObject(0).getString("name");
+				}
+				
+				String applyAccount = objJSON.has("apply_operator_account") ? objJSON.getString("apply_operator_account") : joParam.getString("account") ;
+				
+				//20150512 泓任 mod 改呼叫InsertSystemOperationLog
+				InsertSystemOperationLog(String.valueOf(IP_applyID),null,String.valueOf(ResourceType.Physical_IP),resourceType_Name,_packageID,objJSON.getString("name"),"create",joParam.getString("tenantId"),joParam.getString("account"),applyAccount,objJSON,"1",create_date,null,"0","0");
+				
+				if (addbulletin != 0) {
+					this.myResult.setMessage("Insert ApplyService Successful!");
+					this.myResult.setDATA(joParam);
+					this.myResult.setResult(1);
+				}else{
+					logger.warn("Insert Bulletin Failed");
+					this.myResult.setMessage("Insert Bulletin Failed");
+					this.myResult.setDATA(joParam);
+					this.myResult.setResult(0);
+				}
+				
+			}else{
+				logger.warn("Insert ApplyService Failed");
+				this.myResult.setMessage("Insert ApplyService Failed");
+				this.myResult.setDATA(joParam);
+				this.myResult.setResult(0);
+			}
+		} catch (Exception e) {
+			logger.error(e.getMessage());
+			this.myResult.setResult(0);
+			this.myResult.setMessage(e.getMessage());
+		}
+	}
+
+}

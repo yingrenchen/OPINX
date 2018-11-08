@@ -1,0 +1,24 @@
+#debugPannel {
+	position: fixed;
+	right: 10px;
+	bottom: 10px;
+	padding: 3px;
+
+	display: none;
+	
+	border: solid #333 1px;
+	font-size: .8em;
+	color: #333;
+}
+
+#debugPannel::before {
+	float: top;
+	display: block;
+	content: "Debug Pannel";
+
+	padding: 1px;
+	text-align: center;
+
+	background: #333;
+	color: #fff;
+}
